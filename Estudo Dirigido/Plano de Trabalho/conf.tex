@@ -1,66 +1,72 @@
-%%%%%%%%%% Bibliografia
-% Notas no estilo plain  www.openoffice.org/bibliographic/bibtex-defs.html
-% Notas no estilo abntex2cite  https://www.abntex.net.br/
-% Outros estilos https://www.overleaf.com/learn/latex/bibtex_bibliography_styles
+%%%%%%%%%% Arquivo de configuração do projeto
+%% Insira seus dados e modifique o modelo com suas preferências
+%% Comente/descomente linhas para modificar o modelo
+%% Aviso! O modelo não segue uma norma específica
 
-%---------- books ------------
+%%%%%%%%%%%%%% Informações dos projeto
+\tipo{Plano de Trabalho}
+\titulo{Otimização Combinatória na Geração de Árvores de Decisão}
+\aluno{Sofia Valverde Villas Bôas}
+\orientador{Prof. Dr. Rafael Crivellari Saliba Schouery}
+\palavraschave{Estudo Dirigido, Otimização Combinatória, Machine Learning}
 
-@book{CookCPS97,
-    author      = {Cook, William J. and Cunningham, William H. and      Pulleyblank, William R. and Schrijver, Alexander},
-    title       = {Combinatorial Optimization},
-    year        = {1997},
-    publisher   = {Wiley},
-    series      = {Wiley-Interscience Series in Discrete Mathematics and Optimization},
-    isbn        = {978-0-471-55894-1}
+
+%%%%%%%%%%%%%% Pacotes extras
+\usepackage{lipsum} % Gera texto dummy
+\usepackage{fullpage} % Uniformiza as margens (1,5 cm) 
+\usepackage{hyperref}
+
+%%%%%%%%%%%%%% Bibliografia
+%% Para referências estilo ABNT tire o comentário de uma das linhas 
+%% Manual do pacote de referências: https://www.abntex.net.br/
+
+%\usepackage[num]{abntex2cite}	% Referências numéricas padrão ABNT
+%\usepackage[alf]{abntex2cite}  % Referências alfabéticas padrão ABNT
+
+\AtEndDocument{
+    \bibliografia{bibtex.bib} % Arquivo com o bibtex
+    \estilobibliografico{plain} % Estilo das referências se não usar ABNT
+%% Mais estilos: https://www.overleaf.com/learn/latex/bibtex_bibliography_styles
 }
 
-%------- General stuff -------
+%% Para adicionar backrefs tire o comentário da linha abaixo,
+%% backrefs listam as paginas em que uma referência foi citada
+%\usepackage[brazilian,hyperpageref]{backref} % Adiciona backrefs
 
-@misc{dimacs11,
-    author      = {DIMACS},
-    title       = {11th DIMACS Implementation Challenge},
-    year        = {2014},
-    note        = {\url{dimacs11.zib.de} (acessado em 00/11/2222)}
+%%%%%%%%%%%%%% Confs
+\AtBeginDocument{
+    \maketitle % Gera cabeçalho
+    \pagestyle{plain} % Efetivamente, insere a numeração
+    \renewcommand{\equationautorefname}{Equação}
+    \renewcommand{\figureautorefname}{Figura}
+    \renewcommand{\tableautorefname}{Tabela}
+    \renewcommand{\sectionautorefname}{Seção}
+    \renewcommand{\subsectionautorefname}{Subseção}
+    \renewcommand{\theoremautorefname}{Teorema}
 }
 
-%------- Articles -----------------
 
-@article{Karp72,
-    author      = {Karp, Richard},
-    title       = {Reducibility among Combinatorial Problems},
-    journal     = {Complexity of Computer Computations},
-    year        = {1972},
-    publisher   = {Plenum Press},
-    pages       = {85--103},
-    url         = {https://doi.org/10.1007/978-1-4684-2001-2_9},
-    doi         = {10.1007/978-1-4684-2001-2_9}
-}
+%%%%%%%%%%%%%%%% Comandos úteis para matemática
+\newcommand{\Z}{\mathbb{Z}}
+\newcommand{\Q}{\mathbb{Q}}
+\newcommand{\R}{\mathbb{R}}
+\newcommand{\trans}{^\intercal}
 
-@article{LjubicWPKMF05, 
-    author      = {Ljubi{\' c}, Ivana and Weiskircher, René and Pferschy,      Ulrich and Klau, Gunnar and Mutzel, Petra and Fischetti,          Matteo}, 
-    title       = {An Algorithmic Framework for the Exact Solution of the Prize-Collecting Steiner Tree Problem},
-    journal     = {Mathematical Programming}, 
-    year        = {2005}, 
-    month       = {Oct}, 
-    publisher   = {Springer Science and Business Media LLC}, 
-    volume      = {105},
-    number      = {2-3}, 
-    pages       = {427--449},
-    issn        = {1436-4646}, 
-    url         = {http://dx.doi.org/10.1007/s10107-005-0660-x}, 
-    doi         = {10.1007/s10107-005-0660-x} 
-}
+\DeclareMathOperator{\posto}{posto}
+\DeclareMathOperator{\capacidade}{cap}
+\DeclareMathOperator{\valor}{val}
+\DeclareMathOperator{\mdc}{mdc}
+\DeclareMathOperator{\adj}{adj}
+\DeclareMathOperator{\conv}{conv}
+\DeclareMathOperator{\cone}{cone}
 
-@article{BolukbasiK18, 
-    author      = {Bolukbasi, Gizem and Kocaman, Ayse Selin}, 
-    title       = {A prize collecting Steiner tree approach to least cost evaluation of grid and off-grid electrification systems}, 
-    journal     = {Energy}, 
-    year        = {2018}, 
-    month       = {Oct}, 
-    publisher   = {Elsevier BV}, 
-    volume      = {160}, 
-    pages       = {536--543},
-    issn        = {0360-5442}, 
-    url         = {http://dx.doi.org/10.1016/j.energy.2018.07.029}, 
-    doi         = {10.1016/j.energy.2018.07.029} 
-}
+\DeclarePairedDelimiter\ceil{\lceil}{\rceil}
+\DeclarePairedDelimiter\floor{\lfloor}{\rfloor}
+
+\newtheorem{teorema}{Teorema}
+\newtheorem{definicao}{Definição}
+\newtheorem{lema}{Lema}
+\newtheorem{proposicao}{Proposição}
+\newtheorem{corolario}{Corolário}
+\newtheorem{fato}{Fato}
+\theoremstyle{definition}

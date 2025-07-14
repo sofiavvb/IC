@@ -59,10 +59,10 @@
 \RequirePackage{graphicx} % Inclusão de gráficos
 \RequirePackage{multirow} % Tabelas
 \RequirePackage{multicol} % Formatação
-\RequirePackage{setspace} % Espaço entre linhas
 \RequirePackage{mathtools} % Matemática, evolução do amsmath
 \RequirePackage{amsthm} % Digitar teoremas e afins
 \RequirePackage{amssymb} % Símbolos de matemática
+\RequirePackage{hyperref}
 
 
 %%%%%%%%%%%%%%%% Margens
@@ -74,23 +74,17 @@
 %% Configuração será ignorada ao importar pacote fullpage
 
 %%%%%%%%%%%%%%%% SEÇÕES
-\RequirePackage{titlesec}
-\titleformat{\section}
-  {\normalfont\Large\bfseries}
-  {\thesection}{1em}{}  
-\titleformat{\subsection}
-  {\normalfont\large\bfseries}
-  {\thesubsection}{1em}{}
+\RequirePackage{titlesec} 
+\titleformat{\section}[hang]{\normalfont\Large\bfseries}{\thesection}{1em}{}
+\titleformat{\subsection}[hang]{\normalfont\large\bfseries}{\thesubsection}{1em}{}
+
   
 %%%%%%%%%%%%%%%% BIBLIOGRAFIA 
 \newcommand\mybibname{Refer\^{e}ncias}
 
 \renewcommand\bibsection{%
-    \begin{center}
-        \section*{\hfil\mybibname\hfil}        
-    \end{center}
+    \section*{\mybibname}
 }
-
 % Salva se abnt está em usa para não gerar conflito de estilo
 \newcounter{__usandoabnt}
 \setcounter{__usandoabnt}{0}

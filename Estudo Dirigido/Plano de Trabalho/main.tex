@@ -1,64 +1,70 @@
 \documentclass[12pt]{projeto}
 
-% Insira suas informações no arquivo conf.tex
 \input{conf} % Arquivo de configuração
+\setlength{\headheight}{20pt}
 
 \begin{document}
 
 \section{Introdução}
 
-\lipsum[2]
+No contexto de aprendizado de máquina supervisionado, \textit{árvores de decisão} são uma técnica amplamente utilizada em problemas de classificação e predição. Em um mundo onde a tomada de decisões sensíveis carece cada vez mais de modelos justos, precisos e interpretáveis, o uso de tais árvores se destaca. Isso porque este método tem como grande vantagem a explicabilidade a ele associada \cite{bertsimas2017optimal, NEURIPS2022_fe248e22} e, portanto, é bastante útil em diversas aplicações.
 
-\begin{align*}
-    \sum_{e \in E(T)} c(e) + \sum_{v \notin V(T)} \pi(v)
-\end{align*}
+Tradicionalmente, algoritmos para geração de árvores de decisão as constroem recursivamente de forma heurística, realizando escolhas locais ótimas em cada nó. Apesar de obter resultados razoáveis na prática \cite{vanderlinden2025optimalgreedydecisiontrees},  este processo pode deixar de capturar pontos essenciais dos datasets.
 
-\lipsum[3 - 4]
+Assim, como proposto por Bertsimas e Dunn \cite{bertsimas2017optimal}, é possível gerar árvores de decisão ótimas. Essas árvores vêm sendo relevantes na resolução de problemas práticos, como no cálculo de risco em cirurgias de emergência \cite{Bertsimas2018}. Entretanto, foi demonstrado que esse problema é NP-Difícil \cite{HYAFIL197615}, ou seja, não se conhecem algoritmos que o resolvam em tempo polinomial. 
 
-Em 1972, Karp \cite{Karp72} mostrou que alguns problemas de decisão associados a problemas de otimização são $\mathcal{NP}$-completo e, com isso, o problema de otimização é $\mathcal{NP}$-difícil. Dessa forma, não é esperado que se encontre um algoritmo polinomial para tal problema. Assim, podemos citar alguns artigos \cite{BolukbasiK18, dimacs11, LjubicWPKMF05}, para exemplificar a bibliografia no final do documento.
+Nesse sentido, é possível formular o problema utilizando técnicas de Programação Linear Inteira (PLI), de modo a buscar a otimização de parâmetros como interpretabilidade, justiça, esparsabilidade, altura ou acurácia. 
 
-\section{Objetivos e justificativa}
+Este estudo dirigido terá como objetivo principal o estudo de técnicas de PLI, em paralelo com a leitura de artigos sobre modelos e funcionamento de árvores de decisão. A partir disso, será possível o estudo da optimalidade nessas árvores, bem como a análise de possíveis formulações e parâmetros a serem otimizados. 
 
-\lipsum[1]
+\section{Metodologia}
 
-Em síntese, pretende-se que, ao final do projeto, o aluno esteja familiarizado com os seguintes tópicos:
+Em seguida, são apresentados alguns conceitos importantes que serão estudados ao longo do estudo dirigido.
 
-\begin{enumerate}[label=\roman*)]
-    \item lorem ipsum dolor sit amet, consectetuer adipiscing eli;
-    \item ut purus elit, vestibulumut, placerat ac, adipiscing vitae, feli;
-    \item curabitur dictum gravida mauris;
-    \item donec vehicula augue euneque.
-\end{enumerate}
 
-\section{Métodos}
+\subsection{Programação Linear Inteira}
 
-\lipsum[2]
+Programação Linear (PL) é uma técnica muito utilizada no processo de modelagem e resolução de problemas de otimização. Esses tipos de problemas envolvem a busca pela melhor solução, segundo um critério de custo ou valor, dentro de um conjunto finito ou enumerável de possibilidades. Um programa linear na forma padrão é escrito como:
 
-\subsection{Lorem ipsum dolor sit amet}
+\begin{alignat}{4}
+&&\text{maximize}   \quad && \sum_{j = 1}^{n} c_j x_j \label{equa:obj1}\\
+&&\text{sujeito a} \quad && \sum_{j = 1}^{n} a_{ij} x_j & \leq b_i     \quad && i = 1, \ldots, m \label{res:1.1} \\
+&&                        && x_j                       & \ge 0        \quad &&  j = 1, \ldots, n \label{res:2.1}
+\end{alignat}
 
-\lipsum[3]
+A \autoref{equa:obj1} descreve a \textit{função objetivo}, isto é, a função linear que será maximizada ou minimizada em um programa linear, onde $x_j$ são chamadas de \textit{variáveis de decisão}. A \autoref{res:1.1} representa as \textit{restrições} que delimitam os possíveis valores dessas variáveis. Por fim, a \autoref{res:2.1} indica uma \textit{restrição de não negatividade}, já que em muitos problemas não faz sentido atribuir valores negativos para as variáveis de decisão. 
 
-\section{Plano de trabalho e cronograma}
+Denomina-se \textit{solução viável} o conjunto de soluções que satisfaz todas as restrições impostas ao problema. Já uma \textit{solução ótima} é uma solução viável que maximiza a função objetivo. Vale destacar que podem existir mais de uma solução ótima para o mesmo problema ou até mesmo não existir solução ótima. No caso de não existir nenhuma solução viável, o problema é chamado de \textit{inviável} e, para o caso em que as soluções viáveis permitem que a função objetivo cresça indefinidamente, os problemas são chamados de \textit{ilimitados} \cite{chvátal1983linear}.
 
-\lipsum[4]
+Entre as técnicas utilizadas para resolver problemas de PL, está o \textit{método simplex}. A partir de uma solução básica viável inicial, o simplex iterativamente realiza o processo de pivotamento, isto é, a troca de variáveis não-básicas por básicas, com o objetivo de melhorar ou manter o valor da função objetivo. Apesar de ser exponencial no pior caso, o simplex apresenta performance eficiente na prática.
 
-Abaixo segue uma tabela resumindo o que foi descrito acima. Cada célula representa um bimestre.
+Um Programa Linear Inteiro (PLI) é um PL com a restrição adicional de que todas as variáveis devem assumir valores inteiros. Problemas de PLI são NP-Completo, enquanto os problemas de PL pertencem à classe $P$. Na prática, é possível resolver instâncias específicas de PLI de forma eficiente, graças ao desenvolvimento de algoritmos exatos, técnicas de otimização e heurísticas eficazes \cite{wolsey2020integer}.
 
-\begin{table}[ht] % Dica : https://www.tablesgenerator.com/latex_tables
-\centering
-\begin{tabular}{|c|c|c|c|c|c|c|}
-    \hline
-    \multirow{2}{*}{Atividade}            
-    & \multicolumn{6}{c|}{Bimestre} \\ \cline{2-7} & 1 & 2 & 3 & 4 & 5 & \multicolumn{1}{l|}{6} \\ \hline
-    Atividade 1 & $\times$ & $\times$ & $\times$ & & & \\ \hline
-    Atividade 2 & & $\times$ & $\times$ & $\times$ & & \\ \hline
-    Atividade 3 & & & & $\times$ & $\times$ & $\times$ \\ \hline
-\end{tabular}
-\caption{Cronograma das atividades.}
-\end{table}
+A \textit{relaxação linear} do PLI consiste em remover as restrições de integralidade de um problema, permitindo que as variáveis inteiras assumam valores contínuos \cite{wolsey2020integer}. Dessa forma, é possível utilizar métodos, como o simplex, para obter limites superiores para o valor ótimo do PLI original.
 
-\section{O candidato}
 
-\lipsum[5]
+\subsection{Árvores de Decisão}
+
+Através de uma série de perguntas referentes a características de itens de determinado conjunto de dados, árvores de decisão são capazes de classificá-los em categorias. Elas podem ser usadas, por exemplo, para prever a eficácia de um novo medicamento para pacientes, com base em critérios como dosagem, idade, altura ou peso.
+
+Essas estruturas são compostas de nós internos, que estão associados a perguntas feitas sobre atributos dos dados, e folhas, que se referem às categorias designadas. Elas são construídas a partir de dados em que se conhecem as categorias, processo chamado de \textit{treinamento}. Assim, após essa etapa, são utilizados dados novos, de categorias desconhecidas, de modo a fazer previsões sobre eles.
+
+No processo de construção das árvores de decisão, um dos objetivos é dividir os dados em subgrupos cada vez mais homogêneos. Uma das formas de fazer isso é utilizar o \textit{grau de impureza}, por meio de medidas como o \textit{Índice de Gini}, \textit{Entropia} ou \textit{Razão de Ganho} \cite{Kotsiantis2013}.
+
+Existem diversos algoritmos para a geração dessas árvores, sendo um dos mais influentes o algoritmo CART (Classification and Regression Trees) \cite{breiman1984classification}, em que são utilizadas medidas de impurezas citadas acima para construir árvores binárias recursivamente. Além disso, o algoritmo aplica técnicas de poda, para evitar o \textit{sobreajuste} dos dados, isto é, quando o modelo se ajusta excessivamente ao conjunto de treinamento, perdendo a capacidade de generalizar para novos dados.
+
+Alguns parâmetros são fundamentais para obter modelos mais aplicáveis ao utilizar árvores de decisão. A explicabilidade está relacionada à facilidade com que pessoas podem entender as decisões do modelo. Essa característica é essencial em áreas como medicina ou direito, onde a explicação das decisões é crítica na resolução de problemas. O quão explicável é um modelo está relacionado com alguns outros fatores, como o tamanho da árvore e a forma como os cortes são feitos \cite{Costa2023}. 
+
+A esparsidade se refere ao uso de um número reduzido de atributos para tomar boas decisões, o que contribui para a simplicidade do modelo. Também vale mencionar a justiça, para que o modelo não propague viéses presentes nos dados, sendo um tema crucial e de interesse crescente na área de aprendizado de máquina.
+
+Nesse contexto, o uso de PLI surge como ferramenta na construção ótima de árvores de decisão, indo além dos métodos heurísticos tradicionais e possibilitando avanços no equílibrio entre explicabilidade sem a perda de acurácia, minimização da complexidade e respeito dos critérios de justiça, garantindo soluções que são não apenas precisas, mas também interpretáveis e éticas.
+
+\section{Atividades do Estudo Dirigido}
+
+Esse estudo dirigido terá, portanto, algumas atividades e objetivos principais.
+
+O primeiro passo consistirá no estudo mais aprofundado de Programação Linear Inteira, baseando-se especialmente nos livros de Wolsey \cite{wolsey2020integer} e Chvátal \cite{chvátal1983linear}. Paralelamente, a aluna também irá aprofundar os conhecimentos sobre árvores de decisão, de modo a conseguir perceber nuances, limitações e potencialidades desses modelos em diferentes contextos.
+
+Em seguida, o estudo avançará para a análise de como PLI pode ser utilizada para otimizar parâmetros relevantes em árvores de decisão. Artigos  que exploram essas aplicações serão analisados, destacando abordagens que formalizam a construção ótima da árvore como um problema de otimização inteira, permitindo controlar a complexidade, a explicabilidade e a justiça do modelo \cite{bertsimas2017optimal}.
 
 \end{document}
