@@ -1,0 +1,86 @@
+\documentclass[12pt,a4paper]{article}
+
+\usepackage[a4paper, left=2.5cm, right=2.5cm, top=3cm, bottom=3cm]{geometry}  
+\usepackage[brazil]{babel}  
+\usepackage{float}  
+\usepackage{csquotes}
+\usepackage{setspace}       
+\usepackage{graphicx}       
+\usepackage{amsmath}        
+\usepackage{hyperref}       
+\usepackage{cleveref} 
+\usepackage{lipsum}         
+\usepackage{textcomp}       
+\usepackage{booktabs}  
+\usepackage{array}     
+\usepackage{amssymb}
+\usepackage{bookmark} 
+\usepackage[utf8]{inputenc}
+\usepackage[date=year,
+     backend=biber,
+     backref=page,
+     style=numeric-comp,
+     bibstyle=ieee, 
+     url=false,
+     isbn=true,10.1109/TPWRS.2009.2037006
+     sorting=nty,
+     sortcites=true]{biblatex}
+
+\usepackage{url}
+\usepackage{xurl}
+	 
+\doublespacing
+
+ \AtEveryBibitem{\clearfield{pages}}
+ \AtEveryBibitem{\clearfield{notes}}
+
+\addbibresource{ic.bib}
+
+\title{\textbf{Programação Linear Inteira}}
+\author{Sofia Valverde Villas Bôas}
+\date{}
+
+\begin{document}
+
+\maketitle
+
+\section{Programação Linear}
+
+\emph{Programação Linear} (PL) é uma técnica utilizada no processo de modelagem e resolução de problemas de otimização \cite{Chvatal1983}. Estes problemas envolvem a busca pela melhor solução, segundo um critério de custo ou valor, em um conjunto enumerável de possibilidades. Um programa linear na forma padrão é escrito como:
+
+\begin{alignat}{4}
+&&\text{maximize}   \quad && \sum_{j = 1}^{n} c_j x_j \label{equa:obj1}\\
+&&\text{sujeito a} \quad && \sum_{j = 1}^{n} a_{ij} x_j & \leq b_i     \quad && i = 1, \ldots, m \label{res:1.1} \\
+&&                        && x_j                       & \ge 0        \quad &&  j = 1, \ldots, n \label{res:2.1}
+\end{alignat}
+
+A \autoref{equa:obj1} descreve a \textit{função objetivo}, isto é, a função linear que será maximizada (ou minimizada) em um programa linear, no qual $x_j$ são chamadas de \textit{variáveis de decisão}. A \autoref{res:1.1} representa as \textit{restrições} que delimitam os possíveis valores destas variáveis. Por fim, a \autoref{res:2.1} indica uma \textit{restrição de não negatividade}, já que em muitos problemas não faz sentido atribuir valores negativos para as variáveis de decisão. 
+
+Denomina-se \textit{solução viável} uma atribuição de valores a $x_j$ que satisfaz todas as restrições impostas ao problema. Já uma \textit{solução ótima} é uma solução viável que maximiza a função objetivo. Vale destacar que podem existir mais de uma solução ótima para o mesmo problema ou até mesmo não existir solução ótima. No caso de não existir nenhuma solução viável, o problema é chamado de \textit{inviável} e, para o caso em que as soluções viáveis permitem que a função objetivo cresça indefinidamente, os problemas são chamados de \textit{ilimitados} \cite{Chvatal1983}.
+
+Entre as técnicas utilizadas para resolver problemas de PL, está o \textit{método simplex} \cite{Chvatal1983}. A partir de uma solução viável inicial, o \textit{simplex} realiza iterativamente o processo de pivotamento, isto é, a troca de variáveis, visando melhorar o valor da função objetivo. Apesar de ter complexidade exponencial no pior caso, o \textit{simplex} apresenta desempenho eficiente, na prática.
+
+\section{Programação Linear Inteira}
+
+Um \emph{Programa Linear Inteiro} (PLI) é um PL com a restrição adicional de que todas as variáveis devem assumir valores inteiros. Problemas de PLI são NP-Completo, mas, na prática, é possível resolver instâncias específicas de PLI de forma eficiente, graças ao desenvolvimento de algoritmos exatos, técnicas de otimização e heurísticas eficazes \cite{Wolsey2021}.
+
+
+\subsection{Formulações}
+\subsection{Otimalidade, Relaxação e Limitantes}
+\subsection{Problemas Bem Resolvidos}
+\subsection{Branch and Bound}
+\subsection{Algoritmos de Corte}
+
+Em muitos problemas, obter o $\mathrm{conv}(X)$ é difícil, sendo assim técnicas que obtem aproximações para o $\mathrm{conv}(X)$ se tornam importantes na resolução eficiente de instâncias dadas de determinado problema.
+
+Nesse contexto, somos introduzidos ao conceito de \emph{inequações válidas}.
+
+ 
+
+
+\begingroup
+\onehalfspacing
+\printbibliography
+\endgroup
+
+\end{document}
