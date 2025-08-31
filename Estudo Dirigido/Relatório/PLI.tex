@@ -3,7 +3,6 @@
 \usepackage[a4paper, left=2.5cm, right=2.5cm, top=3cm, bottom=3cm]{geometry}  
 \usepackage[brazil]{babel}  
 \usepackage{float}  
-\usepackage{csquotes}
 \usepackage{setspace}       
 \usepackage{graphicx}       
 \usepackage{amsmath}        
@@ -11,7 +10,8 @@
 \usepackage{cleveref} 
 \usepackage{lipsum}         
 \usepackage{textcomp}       
-\usepackage{booktabs}  
+\usepackage{booktabs}
+\usepackage{csquotes}
 \usepackage{array}     
 \usepackage{amssymb}
 \usepackage{bookmark} 
@@ -25,6 +25,9 @@
      isbn=true,10.1109/TPWRS.2009.2037006
      sorting=nty,
      sortcites=true]{biblatex}
+\usepackage{amsthm}
+\newtheorem{definition}{Definição}[section]
+\newtheorem{proposition}{Proposição}[section]
 
 \usepackage{url}
 \usepackage{xurl}
@@ -73,9 +76,119 @@ Um \emph{Programa Linear Inteiro} (PLI) é um PL com a restrição adicional de 
 
 Em muitos problemas, obter o $\mathrm{conv}(X)$ é difícil, sendo assim técnicas que obtem aproximações para o $\mathrm{conv}(X)$ se tornam importantes na resolução eficiente de instâncias dadas de determinado problema.
 
-Nesse contexto, somos introduzidos ao conceito de \emph{inequações válidas}.
+Nesse contexto, somos introduzidos ao conceito de \emph{inequações válidas}. (continuar depois isso).
 
+Agora, vamos falar um pouco sobre os assuntos principais abordados no cap. 9 do livro do Wolsey \cite{Wolsey2021}
+
+Queremos obter \emph{inequações válidas fortes} que possam ser ainda mais efetivas do que alguns algoritmos genéricos de planos-de-corte que foram mostrados anteriormente. Essas inequações levam a formulações mais fortes, mas iremos formalizar em seguida.
  
+Dada uma família $\mathcal{F}$ de inequações fortes, resolver o \emph{problema de separação} pode ser bastante difícil. O problema de separação é o desafio de, para uma dada solução fracionária $x^*$, ou provar que ela pertence ao  $\mathrm{conv}(X)$ das soluções inteiras, ou encontrar uma desigualdade válida que a separe desse conjunto.  Formalmente, temos:
+
+Dado um conjunto de soluções inteiras $X$ e uma família $\mathcal{F}$ de desigualdades válidas para $\mathrm{conv}(X)$. Para um dado ponto $x^* \in \mathbb{R}^n$ (tipicamente a solução ótima da relaxação linear), o \emph{problema de separação} para a família $\mathcal{F}$ consiste em:
+
+Encontrar uma desigualdade $(\pi, \pi_0)$ pertencente a $\mathcal{F}$ tal que
+\begin{equation}\label{eq:sep-ineq}
+\pi x^* > \pi_0
+\end{equation}
+ou provar que tal desigualdade não existe em $\mathcal{F}$.
+
+A dificuldade de resolver um problema de otimização está diretamente ligada à dificuldade de encontrar planos de corte para ele \cite{Wolsey2021}.
+
+Para melhor definir as inequações fortes, vamos introduzir alguns conceitos importantes para a descrição de poliedros:
+
+\paragraph{Dominância.}  
+
+\begin{definition}
+Se $\pi x \leq \pi_0$ e  $\mu x \leq \mu_0$ são duas inequações válidas para $\mathcal{P} \subseteq \mathbb{R}^n_{+}$, $\pi x \leq \pi_0$ domina $\mu x \leq \mu_0$ em $\mathbb{R}^n_{+}$ se existe $u > 0$ tal que $\pi x \ge u\mu$ e $\pi_0 x \le u\mu_0$ e $(\pi, \pi_0) \ne (u \mu, u\mu_0)$.
+\end{definition}
+
+Basicamente, com essa definição a conclusão lógica é de que o conjunto de pontos que satisfaz a desigualdade dominante é um subconjunto do conjunto de pontos que satisfaz a desigualdade dominada.
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=1\textwidth, height=10cm]{Exemplo_Dominated_Inequalities.png}
+    \caption{Exemplo de inequações dominantes}
+    \label{fig:inequacoes_dominadas}
+\end{figure}
+
+Após isso o livro apresenta o conceito de \emph{inequações redundantes}. Se for possível pegar uma combinação  $\left(\sum_{i=1}^k u_i \pi^i\right)x \le \sum_{i=1}^k u_i \pi_0^i$ de outras desigualdades válidas e essa combinação dominar $\pi x \leq \pi_0$, então a última é redundante. O ponto importante é evitar usar inequações quando se tem uma dominante disponível.
+
+\paragraph{Poliedro, Faces e Facetas.}  
+
+Um cubo ou uma pirâmide são poliedros de dimensão 3. Eles são considerados de dimensão total porque ocupam um volume no espaço 3D, ou seja, de forma mais intuitiva, um poliedro é de dimensão total se ele possui um "interior": se existir um $x_0$ dentro de $\mathcal{P}$ que satisfaz todas as suas desigualdades de forma estrita, ou seja, $Ax_0 \le b$.
+
+Um conjunto de pontos é \emph{afim-dependente} se e somente se, quando subtraímos um deles dos outros, o conjunto resultante (excluindo o vetor que resulta da subtração do que você escolheu dele mesmo) é linearmente dependente.
+
+\begin{definition}
+Os pontos $x^1, \dots, x^k \in \mathbb{R}^n$ são \emph{afim-independentes} se as $k-1$ direções $x^2 - x^1, \dots, x^k - x^1$ são linearmente independentes, ou, alternativamente, se os $k$ vetores $(x^1, 1), \dots, (x^k, 1) \in \mathbb{R}^{n+1}$ são linearmente independentes.
+\end{definition}
+
+\begin{definition}
+A \textbf{dimensão} de um poliedro $P$, denotada por $\text{dim}(P)$, é um a menos que o número máximo de pontos afinamente independentes em $P$.
+\end{definition}
+
+\begin{definition}
+Um conjunto $F \subseteq P$ é uma \textbf{face} de um poliedro $P$ se $F = \{x \in P: \pi x = \pi_0\}$
+\end{definition}
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=1\textwidth, height=10cm]{face_poliedro.png}
+    \caption{Face de um poliedro}
+    \label{fig:face_poliedro}
+\end{figure}
+
+\begin{definition}
+    $F$ é uma \textbf{faceta} de $P$ se é uma face de $P$ e $\text{dim}(F) = \text{dim}(P) - 1$. 
+\end{definition}
+
+Ou seja, uma faceta é um tipo especial de face. Vale notar, por exemplo, que em um cubo, tanto as arestas como os vértices também são faces, apesar de não serem facetas.
+
+\subsubsection{Cobertura na Mochila}
+
+\begin{definition}
+Um conjunto $C \subseteq N$ é uma \textbf{cobertura} se
+$$ \sum_{j \in C} a_j > b. $$
+Uma cobertura é \textbf{mínima} se $C \setminus \{j\}$ não é uma cobertura para qualquer $j \in C$.
+\end{definition}
+
+\begin{proposition}
+Se $C \subseteq N$ é uma cobertura  para $X$, a \textbf{desigualdade da cobertura}
+$$ \sum_{j \in C} x_j \le |C| - 1 $$
+é válida para $X$.
+\end{proposition}
+
+``Pelo menos um item do grupo $C$ tem que ficar de fora'' significa que, para o vetor de incidência $x$, pelo menos um dos $x_j$ onde $j \in C$ deve ter o valor 0. Ou seja, essa inequação nos diz que não podemos escolher todo mundo da cobertura para compor nossa solução.
+
+Há ainda uma inequação extendida mais forte, que adiciona na restrição os elementos que tem pesos maiores do que os que estão no cover C.
+O coeficiente $\alpha_{i}$ que procuramos nos indica o ``custo'' de se escolher um item que não está no cover mais tem peso maior.
+
+Queremos achar um coeficiente que funcione como uma penalidade. Ele nos diz de quantos itens do cover teremos de abrir mão no lado esquerdo da inequação, caso escolhamos determinado item que está fora do cover
+
+A cobertura mais barata não é a que deixa mais itens de fora. Pelo contrário, é a cobertura que a solução fracionária atual $x^*$ mais viola, ou seja, a que chega mais perto de conseguir colocar todos os seus itens na mochila. 
+
+\subsubsection{Inequações Mistas 0-1}
+
+Vamos começar entendendo o que o conjunto X representa:
+\[
+X = \{(x, y) \in \{0,1\}^n \times \mathbb{R}_+^n : \sum_{j \in N_1} y_j \leq b + \sum_{j \in N_2} y_j, \; y_j \leq a_j x_j \text{ para } j \in N_1 \cup N_2\}
+\]
+
+Estamos modelando fluxo, cada $y_{j}$ nos dá a quantidade de um recurso j. $N_1$ é o conjunto que está agrupando as coisas que entram e $N_2$, as que saem. A primeira restrição indica que tudo que entra em um nó menos tudo que sai dele não pode exceder a sua capacidade $b$. 
+
+\begin{definition}
+Um conjunto $C= C1 \cup C2$ com $C1 \subseteq N1$ e $C2 \subseteq N2$ é uma \textbf{cobertura generalizada} se:
+\[
+\sum_{j \in C_1} a_j - \sum_{j \in C_2} a_j = b + \lambda \text{ com } \lambda > 0
+\]
+
+\end{definition}
+
+A desigualdade de cobertura de fluxo diz: ``Se temos uma cobertura generalizada, então não podemos simultaneamente:
+\begin{enumerate}
+\item Usar capacidade total em todos os arcos cobertos, e
+\item Ter todas as variáveis binárias na cobertura definidas como 1''
+\end{enumerate}
 
 
 \begingroup
