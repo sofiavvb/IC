@@ -190,10 +190,31 @@ A desigualdade de cobertura de fluxo diz: ``Se temos uma cobertura generalizada,
 \item Ter todas as variáveis binárias na cobertura definidas como 1''
 \end{enumerate}
 
+\subsection{Branch and Cut}
+
+É um Branch and Bound tunado, a ideia aqui é que antes de ramificar ao encontrar uma solução da relaxação linear fracionária melhor que o incumbente atual, adicionamos cortes para tentar cortar a solução fracionária e melhorar a formulação. Dessa forma, conseguimos apertar mais o upper bound.
+
+A grande vantagem do Branch-and-Cut é que os cortes geram limites superiores muito mais fortes. Isso permite podar a árvore de busca muito mais cedo, explorando um número drasticamente menor de nós e, consequentemente, resolvendo o problema de forma muito mais rápida.
+
+\subsection{Dúvidas}
+
+\begin{itemize}
+    \item Não entendi direito a inequação de cover para fluxo, ficou muito abstrato para mim isso. Mesmo com o exemplo tá dificil de pegar a intuicao!
+    \item 
+    $\sum _{e \in E(S)} x_e \leq \sum _{i \in S \setminus \{k\}} y_i \quad \forall k \in S, S \subseteq N \setminus \{1\}$. \\
+    Não entendi muito bem essa restrição do \emph{Prize Collecting Travelling Salesman Problem
+(PCTSP)}.
+    \item lalalalla
+    \item lalalal
+\end{itemize}
+
 
 \begingroup
 \onehalfspacing
 \printbibliography
 \endgroup
+
+
+
 
 \end{document}

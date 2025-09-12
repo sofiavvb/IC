@@ -1,0 +1,74 @@
+\documentclass[12pt,a4paper]{article}
+
+\usepackage[a4paper, left=2.5cm, right=2.5cm, top=3cm, bottom=3cm]{geometry}  
+\usepackage[brazil]{babel}  
+\usepackage{float}  
+\usepackage{setspace}       
+\usepackage{graphicx}       
+\usepackage{amsmath}        
+\usepackage{hyperref}       
+\usepackage{cleveref} 
+\usepackage{lipsum}         
+\usepackage{textcomp}       
+\usepackage{booktabs}
+\usepackage{csquotes}
+\usepackage{array}     
+\usepackage{amssymb}
+\usepackage{bookmark} 
+\usepackage[utf8]{inputenc}
+\usepackage[date=year,
+     backend=biber,
+     backref=page,
+     style=numeric-comp,
+     bibstyle=ieee, 
+     url=false,
+     isbn=true,10.1109/TPWRS.2009.2037006
+     sorting=nty,
+     sortcites=true]{biblatex}
+\usepackage{amsthm}
+\newtheorem{definition}{Definição}[section]
+\newtheorem{proposition}{Proposição}[section]
+
+\usepackage{url}
+\usepackage{xurl}
+	 
+\doublespacing
+
+ \AtEveryBibitem{\clearfield{pages}}
+ \AtEveryBibitem{\clearfield{notes}}
+
+\addbibresource{ic.bib}
+
+\title{\textbf{Árvores de Decisão}}
+\author{Sofia Valverde Villas Bôas}
+\date{}
+
+\begin{document}
+
+\maketitle
+
+\section{Dúvidas minhas}
+
+\begin{enumerate}
+    \item Qual a melhor forma de eu traduzir splits?
+\end{enumerate}
+
+\section{Non‑greedy trees}
+
+Árvores geradas da forma tradicional gulosa podem cair em ótimos locais, mas não necessariamente em globais. Isso porque o processo de construção dessas árvores se baseia em achar a melhor forma de dividir a partir de certo nó e não leva em consideração possíveis divisões futuras.
+
+Existem algumas formas na literatura que sugerem como tratar esse problema de sub-otimalidade.
+
+\subsection{Árvores Evolucionais}
+
+Baseiam-se em \emph{algoritmos genéticos}
+
+
+
+
+\begingroup
+\onehalfspacing
+\printbibliography
+\endgroup
+
+\end{document}
