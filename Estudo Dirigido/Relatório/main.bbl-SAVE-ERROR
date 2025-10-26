@@ -1,0 +1,564 @@
+% $ biblatex auxiliary file $
+% $ biblatex bbl format version 3.3 $
+% Do not modify the above lines!
+%
+% This is an auxiliary file used by the 'biblatex' package.
+% This file may safely be deleted. It will be recreated by
+% biber as required.
+%
+\begingroup
+\makeatletter
+\@ifundefined{ver@biblatex.sty}
+  {\@latex@error
+     {Missing 'biblatex' package}
+     {The bibliography requires the 'biblatex' package.}
+      \aftergroup\endinput}
+  {}
+\endgroup
+
+
+\refsection{0}
+  \datalist[entry]{nty/global//global/global/global}
+    \entry{Aghaei2021}{misc}{}{}
+      \name{author}{3}{}{%
+        {{hash=49d9c1d9dc0b3568c27b1b9d79a9149a}{%
+           family={Aghaei},
+           familyi={A\bibinitperiod},
+           given={Sina},
+           giveni={S\bibinitperiod}}}%
+        {{hash=1a405fe996ced74d1d6d7065f6dd4a3a}{%
+           family={Gómez},
+           familyi={G\bibinitperiod},
+           given={Andrés},
+           giveni={A\bibinitperiod}}}%
+        {{hash=b37ca4721e8f89317e0c6d0aa9d33731}{%
+           family={Vayanos},
+           familyi={V\bibinitperiod},
+           given={Phebe},
+           giveni={P\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {arXiv}%
+      }
+      \strng{namehash}{f02258cb8626bf7ce9f7aa2aed7b08c8}
+      \strng{fullhash}{c519e7ea5df3d74086a9eae7041ba0c8}
+      \strng{fullhashraw}{c519e7ea5df3d74086a9eae7041ba0c8}
+      \strng{bibnamehash}{c519e7ea5df3d74086a9eae7041ba0c8}
+      \strng{authorbibnamehash}{c519e7ea5df3d74086a9eae7041ba0c8}
+      \strng{authornamehash}{f02258cb8626bf7ce9f7aa2aed7b08c8}
+      \strng{authorfullhash}{c519e7ea5df3d74086a9eae7041ba0c8}
+      \strng{authorfullhashraw}{c519e7ea5df3d74086a9eae7041ba0c8}
+      \field{sortinit}{A}
+      \field{sortinithash}{2f401846e2029bad6b3ecc16d50031e2}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{Strong Optimal Classification Trees}
+      \field{year}{2021}
+      \verb{doi}
+      \verb 10.48550/ARXIV.2103.15965
+      \endverb
+      \keyw{Machine Learning (cs.LG),Applications (stat.AP),FOS: Computer and information sciences,FOS: Computer and information sciences}
+    \endentry
+    \entry{Bertsimas2017}{article}{}{}
+      \name{author}{2}{}{%
+        {{hash=5b57425178d5ae2d2835ef44cb330e42}{%
+           family={Bertsimas},
+           familyi={B\bibinitperiod},
+           given={Dimitris},
+           giveni={D\bibinitperiod}}}%
+        {{hash=463d0db515e28d5fd875967cad4414a6}{%
+           family={Dunn},
+           familyi={D\bibinitperiod},
+           given={Jack},
+           giveni={J\bibinitperiod}}}%
+      }
+      \list{publisher}{2}{%
+        {Springer Science}%
+        {Business Media LLC}%
+      }
+      \strng{namehash}{b9acc8f0ba85687b02948fa88936a9ba}
+      \strng{fullhash}{b9acc8f0ba85687b02948fa88936a9ba}
+      \strng{fullhashraw}{b9acc8f0ba85687b02948fa88936a9ba}
+      \strng{bibnamehash}{b9acc8f0ba85687b02948fa88936a9ba}
+      \strng{authorbibnamehash}{b9acc8f0ba85687b02948fa88936a9ba}
+      \strng{authornamehash}{b9acc8f0ba85687b02948fa88936a9ba}
+      \strng{authorfullhash}{b9acc8f0ba85687b02948fa88936a9ba}
+      \strng{authorfullhashraw}{b9acc8f0ba85687b02948fa88936a9ba}
+      \field{sortinit}{B}
+      \field{sortinithash}{d7095fff47cda75ca2589920aae98399}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{issn}{1573-0565}
+      \field{journaltitle}{Machine Learning}
+      \field{month}{4}
+      \field{number}{7}
+      \field{title}{Optimal classification trees}
+      \field{volume}{106}
+      \field{year}{2017}
+      \field{pages}{1039\bibrangedash 1082}
+      \range{pages}{44}
+      \verb{doi}
+      \verb 10.1007/s10994-017-5633-9
+      \endverb
+    \endentry
+    \entry{Bertsimas2018}{article}{}{}
+      \name{author}{4}{}{%
+        {{hash=5b57425178d5ae2d2835ef44cb330e42}{%
+           family={Bertsimas},
+           familyi={B\bibinitperiod},
+           given={Dimitris},
+           giveni={D\bibinitperiod}}}%
+        {{hash=463d0db515e28d5fd875967cad4414a6}{%
+           family={Dunn},
+           familyi={D\bibinitperiod},
+           given={Jack},
+           giveni={J\bibinitperiod}}}%
+        {{hash=f1eeac69d3a49f39dbfbeb19e9f8bd72}{%
+           family={Velmahos},
+           familyi={V\bibinitperiod},
+           given={George\bibnamedelima C.},
+           giveni={G\bibinitperiod\bibinitdelim C\bibinitperiod}}}%
+        {{hash=9f302298e2095a780be7d5e8401ea856}{%
+           family={Kaafarani},
+           familyi={K\bibinitperiod},
+           given={Haytham\bibnamedelimb M.\bibnamedelimi A.},
+           giveni={H\bibinitperiod\bibinitdelim M\bibinitperiod\bibinitdelim A\bibinitperiod}}}%
+      }
+      \strng{namehash}{1e8ba443b38e5dcfdd80f083de4447ca}
+      \strng{fullhash}{c69dcfe93f1e5288f825f6498fc5d61f}
+      \strng{fullhashraw}{c69dcfe93f1e5288f825f6498fc5d61f}
+      \strng{bibnamehash}{c69dcfe93f1e5288f825f6498fc5d61f}
+      \strng{authorbibnamehash}{c69dcfe93f1e5288f825f6498fc5d61f}
+      \strng{authornamehash}{1e8ba443b38e5dcfdd80f083de4447ca}
+      \strng{authorfullhash}{c69dcfe93f1e5288f825f6498fc5d61f}
+      \strng{authorfullhashraw}{c69dcfe93f1e5288f825f6498fc5d61f}
+      \field{sortinit}{B}
+      \field{sortinithash}{d7095fff47cda75ca2589920aae98399}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Annals of Surgery}
+      \field{month}{10}
+      \field{number}{4}
+      \field{title}{Surgical Risk Is Not Linear: Derivation and Validation of a Novel, User-friendly, and Machine-learning-based Predictive OpTimal Trees in Emergency Surgery Risk (POTTER) Calculator}
+      \field{volume}{268}
+      \field{year}{2018}
+      \field{pages}{574\bibrangedash 583}
+      \range{pages}{10}
+      \verb{doi}
+      \verb 10.1097/SLA.0000000000002956
+      \endverb
+    \endentry
+    \entry{Chan2019}{inbook}{}{}
+      \name{author}{5}{}{%
+        {{hash=5f35cbcdd71756efc9fbef48efc33010}{%
+           family={Chan},
+           familyi={C\bibinitperiod},
+           given={Hau},
+           giveni={H\bibinitperiod}}}%
+        {{hash=f5939162cae2d450f396f0f61e9143a5}{%
+           family={Rice},
+           familyi={R\bibinitperiod},
+           given={Eric},
+           giveni={E\bibinitperiod}}}%
+        {{hash=b37ca4721e8f89317e0c6d0aa9d33731}{%
+           family={Vayanos},
+           familyi={V\bibinitperiod},
+           given={Phebe},
+           giveni={P\bibinitperiod}}}%
+        {{hash=0002f004c0bbf54fb46776c3a82af7a2}{%
+           family={Tambe},
+           familyi={T\bibinitperiod},
+           given={Milind},
+           giveni={M\bibinitperiod}}}%
+        {{hash=0510fefc8262e6b21f4b91348bdcf672}{%
+           family={Morton},
+           familyi={M\bibinitperiod},
+           given={Matthew},
+           giveni={M\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {Springer International Publishing}%
+      }
+      \strng{namehash}{05d3dbbdb57e5088d238448d283cbfe4}
+      \strng{fullhash}{c1c5954c508cc9660a189c0be2b184f8}
+      \strng{fullhashraw}{c1c5954c508cc9660a189c0be2b184f8}
+      \strng{bibnamehash}{c1c5954c508cc9660a189c0be2b184f8}
+      \strng{authorbibnamehash}{c1c5954c508cc9660a189c0be2b184f8}
+      \strng{authornamehash}{05d3dbbdb57e5088d238448d283cbfe4}
+      \strng{authorfullhash}{c1c5954c508cc9660a189c0be2b184f8}
+      \strng{authorfullhashraw}{c1c5954c508cc9660a189c0be2b184f8}
+      \field{sortinit}{C}
+      \field{sortinithash}{4d103a86280481745c9c897c925753c0}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{booktitle}{Machine Learning and Knowledge Discovery in Databases}
+      \field{isbn}{9783030109974}
+      \field{issn}{1611-3349}
+      \field{title}{From Empirical Analysis to Public Policy: Evaluating Housing Systems for Homeless Youth}
+      \field{year}{2019}
+      \field{pages}{69\bibrangedash 85}
+      \range{pages}{17}
+      \verb{doi}
+      \verb 10.1007/978-3-030-10997-4_5
+      \endverb
+    \endentry
+    \entry{Chvatal1983}{book}{}{}
+      \name{author}{1}{}{%
+        {{hash=ce0039288011d6fb178612b0a6f7b47e}{%
+           family={Chvátal},
+           familyi={C\bibinitperiod},
+           given={V.},
+           giveni={V\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {W. H. Freeman}%
+      }
+      \strng{namehash}{ce0039288011d6fb178612b0a6f7b47e}
+      \strng{fullhash}{ce0039288011d6fb178612b0a6f7b47e}
+      \strng{fullhashraw}{ce0039288011d6fb178612b0a6f7b47e}
+      \strng{bibnamehash}{ce0039288011d6fb178612b0a6f7b47e}
+      \strng{authorbibnamehash}{ce0039288011d6fb178612b0a6f7b47e}
+      \strng{authornamehash}{ce0039288011d6fb178612b0a6f7b47e}
+      \strng{authorfullhash}{ce0039288011d6fb178612b0a6f7b47e}
+      \strng{authorfullhashraw}{ce0039288011d6fb178612b0a6f7b47e}
+      \field{sortinit}{C}
+      \field{sortinithash}{4d103a86280481745c9c897c925753c0}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{isbn}{9780716715870}
+      \field{series}{Series of books in the mathematical sciences}
+      \field{title}{Linear Programming}
+      \field{year}{1983}
+      \verb{urlraw}
+      \verb https://books.google.com.br/books?id=DN20_tW_BV0C
+      \endverb
+      \verb{url}
+      \verb https://books.google.com.br/books?id=DN20_tW_BV0C
+      \endverb
+    \endentry
+    \entry{Costa2022}{article}{}{}
+      \name{author}{2}{}{%
+        {{hash=a0dae33c55771d4e85c9adc93e4d622e}{%
+           family={Costa},
+           familyi={C\bibinitperiod},
+           given={Vinícius\bibnamedelima G.},
+           giveni={V\bibinitperiod\bibinitdelim G\bibinitperiod}}}%
+        {{hash=999ffcb8d5b63257bd37aed233d0711b}{%
+           family={Pedreira},
+           familyi={P\bibinitperiod},
+           given={Carlos\bibnamedelima E.},
+           giveni={C\bibinitperiod\bibinitdelim E\bibinitperiod}}}%
+      }
+      \list{publisher}{2}{%
+        {Springer Science}%
+        {Business Media LLC}%
+      }
+      \strng{namehash}{4f34401ee7489d34bb46537937b34339}
+      \strng{fullhash}{4f34401ee7489d34bb46537937b34339}
+      \strng{fullhashraw}{4f34401ee7489d34bb46537937b34339}
+      \strng{bibnamehash}{4f34401ee7489d34bb46537937b34339}
+      \strng{authorbibnamehash}{4f34401ee7489d34bb46537937b34339}
+      \strng{authornamehash}{4f34401ee7489d34bb46537937b34339}
+      \strng{authorfullhash}{4f34401ee7489d34bb46537937b34339}
+      \strng{authorfullhashraw}{4f34401ee7489d34bb46537937b34339}
+      \field{sortinit}{C}
+      \field{sortinithash}{4d103a86280481745c9c897c925753c0}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{issn}{1573-7462}
+      \field{journaltitle}{Artificial Intelligence Review}
+      \field{month}{10}
+      \field{number}{5}
+      \field{title}{Recent advances in decision trees: an updated survey}
+      \field{volume}{56}
+      \field{year}{2022}
+      \field{pages}{4765\bibrangedash 4800}
+      \range{pages}{36}
+      \verb{doi}
+      \verb 10.1007/s10462-022-10275-5
+      \endverb
+    \endentry
+    \entry{Genc2010}{article}{}{}
+      \name{author}{5}{}{%
+        {{hash=3f5ca4c6886fee635b732735a13c1342}{%
+           family={Genc},
+           familyi={G\bibinitperiod},
+           given={Istemihan},
+           giveni={I\bibinitperiod}}}%
+        {{hash=ee45ef3c903feaec379b9c38c64b5e72}{%
+           family={Diao},
+           familyi={D\bibinitperiod},
+           given={Ruisheng},
+           giveni={R\bibinitperiod}}}%
+        {{hash=e3eb2323cfc519b09f12d8ce1bb715d6}{%
+           family={Vittal},
+           familyi={V\bibinitperiod},
+           given={Vijay},
+           giveni={V\bibinitperiod}}}%
+        {{hash=0a3df25d844c9adbf3e36420bdc3b44d}{%
+           family={Kolluri},
+           familyi={K\bibinitperiod},
+           given={Sharma},
+           giveni={S\bibinitperiod}}}%
+        {{hash=cea7f8f8b859a9fdfb1bc588bfeafbef}{%
+           family={Mandal},
+           familyi={M\bibinitperiod},
+           given={Sujit},
+           giveni={S\bibinitperiod}}}%
+      }
+      \list{publisher}{2}{%
+        {Institute of Electrical}%
+        {Electronics Engineers (IEEE)}%
+      }
+      \strng{namehash}{418c75ce09e1edbdd06de96d311dcbb7}
+      \strng{fullhash}{3cf017a7cdd6f2eeb8be42108e9d37fd}
+      \strng{fullhashraw}{3cf017a7cdd6f2eeb8be42108e9d37fd}
+      \strng{bibnamehash}{3cf017a7cdd6f2eeb8be42108e9d37fd}
+      \strng{authorbibnamehash}{3cf017a7cdd6f2eeb8be42108e9d37fd}
+      \strng{authornamehash}{418c75ce09e1edbdd06de96d311dcbb7}
+      \strng{authorfullhash}{3cf017a7cdd6f2eeb8be42108e9d37fd}
+      \strng{authorfullhashraw}{3cf017a7cdd6f2eeb8be42108e9d37fd}
+      \field{sortinit}{G}
+      \field{sortinithash}{32d67eca0634bf53703493fb1090a2e8}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{issn}{1558-0679}
+      \field{journaltitle}{IEEE Transactions on Power Systems}
+      \field{month}{8}
+      \field{number}{3}
+      \field{title}{Decision Tree-Based Preventive and Corrective Control Applications for Dynamic Security Enhancement in Power Systems}
+      \field{volume}{25}
+      \field{year}{2010}
+      \field{pages}{1611\bibrangedash 1619}
+      \range{pages}{9}
+      \verb{doi}
+      \verb 10.1109/tpwrs.2009.2037006
+      \endverb
+    \endentry
+    \entry{Gurobi}{online}{}{}
+      \field{sortinit}{G}
+      \field{sortinithash}{32d67eca0634bf53703493fb1090a2e8}
+      \field{labeltitlesource}{title}
+      \field{title}{Gurobi Optimizer}
+      \field{urlday}{26}
+      \field{urlmonth}{10}
+      \field{urlyear}{2025}
+      \field{year}{2025}
+      \field{urldateera}{ce}
+      \verb{urlraw}
+      \verb https://www.gurobi.com
+      \endverb
+      \verb{url}
+      \verb https://www.gurobi.com
+      \endverb
+    \endentry
+    \entry{Hyafil1976}{article}{}{}
+      \name{author}{2}{}{%
+        {{hash=e85f8ce0a6b692a613b601d2bbde2925}{%
+           family={Hyafil},
+           familyi={H\bibinitperiod},
+           given={Laurent},
+           giveni={L\bibinitperiod}}}%
+        {{hash=3a964821f97ee17f8bb285bc61c52899}{%
+           family={Rivest},
+           familyi={R\bibinitperiod},
+           given={Ronald\bibnamedelima L.},
+           giveni={R\bibinitperiod\bibinitdelim L\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {Elsevier BV}%
+      }
+      \strng{namehash}{1a04d65da4612bd2ae56c7c8de842519}
+      \strng{fullhash}{1a04d65da4612bd2ae56c7c8de842519}
+      \strng{fullhashraw}{1a04d65da4612bd2ae56c7c8de842519}
+      \strng{bibnamehash}{1a04d65da4612bd2ae56c7c8de842519}
+      \strng{authorbibnamehash}{1a04d65da4612bd2ae56c7c8de842519}
+      \strng{authornamehash}{1a04d65da4612bd2ae56c7c8de842519}
+      \strng{authorfullhash}{1a04d65da4612bd2ae56c7c8de842519}
+      \strng{authorfullhashraw}{1a04d65da4612bd2ae56c7c8de842519}
+      \field{sortinit}{H}
+      \field{sortinithash}{23a3aa7c24e56cfa16945d55545109b5}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{issn}{0020-0190}
+      \field{journaltitle}{Information Processing Letters}
+      \field{month}{5}
+      \field{number}{1}
+      \field{title}{Constructing optimal binary decision trees is NP-complete}
+      \field{volume}{5}
+      \field{year}{1976}
+      \field{pages}{15\bibrangedash 17}
+      \range{pages}{3}
+      \verb{doi}
+      \verb 10.1016/0020-0190(76)90095-8
+      \endverb
+    \endentry
+    \entry{Linden2024}{misc}{}{}
+      \name{author}{5}{}{%
+        {{hash=be7066c3258f625ce025d76410cabeab}{%
+           family={Linden},
+           familyi={L\bibinitperiod},
+           given={Jacobus\bibnamedelimb G.\bibnamedelimi M.},
+           giveni={J\bibinitperiod\bibinitdelim G\bibinitperiod\bibinitdelim M\bibinitperiod},
+           prefix={van\bibnamedelima der},
+           prefixi={v\bibinitperiod\bibinitdelim d\bibinitperiod}}}%
+        {{hash=af67a701713493112110caaf89edb654}{%
+           family={Vos},
+           familyi={V\bibinitperiod},
+           given={Daniël},
+           giveni={D\bibinitperiod}}}%
+        {{hash=10b45edfdbaa452eec5e53508730a3ca}{%
+           family={Weerdt},
+           familyi={W\bibinitperiod},
+           given={Mathijs\bibnamedelima M.},
+           giveni={M\bibinitperiod\bibinitdelim M\bibinitperiod},
+           prefix={de},
+           prefixi={d\bibinitperiod}}}%
+        {{hash=ea9decd5528aef262468b61eaf0ceb3c}{%
+           family={Verwer},
+           familyi={V\bibinitperiod},
+           given={Sicco},
+           giveni={S\bibinitperiod}}}%
+        {{hash=67b30b9bbc2166f64401d6da8faa48b3}{%
+           family={Demirović},
+           familyi={D\bibinitperiod},
+           given={Emir},
+           giveni={E\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {arXiv}%
+      }
+      \strng{namehash}{2bc6d94ab3f0a5bf5fd83ac0bbca38c2}
+      \strng{fullhash}{b925d985dd256f6e2c2cacc4e4df862b}
+      \strng{fullhashraw}{b925d985dd256f6e2c2cacc4e4df862b}
+      \strng{bibnamehash}{b925d985dd256f6e2c2cacc4e4df862b}
+      \strng{authorbibnamehash}{b925d985dd256f6e2c2cacc4e4df862b}
+      \strng{authornamehash}{2bc6d94ab3f0a5bf5fd83ac0bbca38c2}
+      \strng{authorfullhash}{b925d985dd256f6e2c2cacc4e4df862b}
+      \strng{authorfullhashraw}{b925d985dd256f6e2c2cacc4e4df862b}
+      \field{sortinit}{L}
+      \field{sortinithash}{7c47d417cecb1f4bd38d1825c427a61a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{Optimal or Greedy Decision Trees? Revisiting their Objectives, Tuning, and Performance}
+      \field{year}{2024}
+      \verb{doi}
+      \verb 10.48550/ARXIV.2409.12788
+      \endverb
+      \keyw{Machine Learning (cs.LG),FOS: Computer and information sciences,FOS: Computer and information sciences}
+    \endentry
+    \entry{Rudin2019}{article}{}{}
+      \name{author}{1}{}{%
+        {{hash=ed6b4fef67abb4c043b72d1843b36826}{%
+           family={Rudin},
+           familyi={R\bibinitperiod},
+           given={Cynthia},
+           giveni={C\bibinitperiod}}}%
+      }
+      \list{publisher}{2}{%
+        {Springer Science}%
+        {Business Media LLC}%
+      }
+      \strng{namehash}{ed6b4fef67abb4c043b72d1843b36826}
+      \strng{fullhash}{ed6b4fef67abb4c043b72d1843b36826}
+      \strng{fullhashraw}{ed6b4fef67abb4c043b72d1843b36826}
+      \strng{bibnamehash}{ed6b4fef67abb4c043b72d1843b36826}
+      \strng{authorbibnamehash}{ed6b4fef67abb4c043b72d1843b36826}
+      \strng{authornamehash}{ed6b4fef67abb4c043b72d1843b36826}
+      \strng{authorfullhash}{ed6b4fef67abb4c043b72d1843b36826}
+      \strng{authorfullhashraw}{ed6b4fef67abb4c043b72d1843b36826}
+      \field{sortinit}{R}
+      \field{sortinithash}{5e1c39a9d46ffb6bebd8f801023a9486}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{issn}{2522-5839}
+      \field{journaltitle}{Nature Machine Intelligence}
+      \field{month}{5}
+      \field{number}{5}
+      \field{title}{Stop explaining black box machine learning models for high stakes decisions and use interpretable models instead}
+      \field{volume}{1}
+      \field{year}{2019}
+      \field{pages}{206\bibrangedash 215}
+      \range{pages}{10}
+      \verb{doi}
+      \verb 10.1038/s42256-019-0048-x
+      \endverb
+    \endentry
+    \entry{Verwer2019}{article}{}{}
+      \name{author}{2}{}{%
+        {{hash=ea9decd5528aef262468b61eaf0ceb3c}{%
+           family={Verwer},
+           familyi={V\bibinitperiod},
+           given={Sicco},
+           giveni={S\bibinitperiod}}}%
+        {{hash=f1cad84a5478062b92fdad1fe3223919}{%
+           family={Zhang},
+           familyi={Z\bibinitperiod},
+           given={Yingqian},
+           giveni={Y\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {Association for the Advancement of Artificial Intelligence (AAAI)}%
+      }
+      \strng{namehash}{009509946e62277a9f01ac4629ac45a0}
+      \strng{fullhash}{009509946e62277a9f01ac4629ac45a0}
+      \strng{fullhashraw}{009509946e62277a9f01ac4629ac45a0}
+      \strng{bibnamehash}{009509946e62277a9f01ac4629ac45a0}
+      \strng{authorbibnamehash}{009509946e62277a9f01ac4629ac45a0}
+      \strng{authornamehash}{009509946e62277a9f01ac4629ac45a0}
+      \strng{authorfullhash}{009509946e62277a9f01ac4629ac45a0}
+      \strng{authorfullhashraw}{009509946e62277a9f01ac4629ac45a0}
+      \field{sortinit}{V}
+      \field{sortinithash}{afb52128e5b4dc4b843768c0113d673b}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{issn}{2159-5399}
+      \field{journaltitle}{Proceedings of the AAAI Conference on Artificial Intelligence}
+      \field{month}{7}
+      \field{number}{01}
+      \field{title}{Learning Optimal Classification Trees Using a Binary Linear Program Formulation}
+      \field{volume}{33}
+      \field{year}{2019}
+      \field{pages}{1625\bibrangedash 1632}
+      \range{pages}{8}
+      \verb{doi}
+      \verb 10.1609/aaai.v33i01.33011624
+      \endverb
+    \endentry
+    \entry{Wolsey2021}{book}{}{}
+      \name{author}{1}{}{%
+        {{hash=85dba919fdceaad20b2b4009570310cc}{%
+           family={Wolsey},
+           familyi={W\bibinitperiod},
+           given={Laurence\bibnamedelima A.},
+           giveni={L\bibinitperiod\bibinitdelim A\bibinitperiod}}}%
+      }
+      \list{location}{1}{%
+        {Hoboken, NJ}%
+      }
+      \list{publisher}{1}{%
+        {Wiley}%
+      }
+      \strng{namehash}{85dba919fdceaad20b2b4009570310cc}
+      \strng{fullhash}{85dba919fdceaad20b2b4009570310cc}
+      \strng{fullhashraw}{85dba919fdceaad20b2b4009570310cc}
+      \strng{bibnamehash}{85dba919fdceaad20b2b4009570310cc}
+      \strng{authorbibnamehash}{85dba919fdceaad20b2b4009570310cc}
+      \strng{authornamehash}{85dba919fdceaad20b2b4009570310cc}
+      \strng{authorfullhash}{85dba919fdceaad20b2b4009570310cc}
+      \strng{authorfullhashraw}{85dba919fdceaad20b2b4009570310cc}
+      \field{sortinit}{W}
+      \field{sortinithash}{4315d78024d0cea9b57a0c6f0e35ed0d}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{edition}{Second edition}
+      \field{isbn}{9781119606529}
+      \field{note}{Description based upon online resource; title from PDF title page (viewed September 28, 2020)}
+      \field{pagetotal}{1316}
+      \field{title}{Integer programming}
+      \field{year}{2021}
+    \endentry
+  \enddatalist
+\endrefsection
+\endinput
+

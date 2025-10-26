@@ -2377,22 +2377,29 @@
   </bcf:bibdata>
   <bcf:section number="0">
     <bcf:citekey order="1" intorder="1">Bertsimas2017</bcf:citekey>
-    <bcf:citekey order="1" intorder="2">Costa2022</bcf:citekey>
-    <bcf:citekey order="1" intorder="3">Rudin2019</bcf:citekey>
-    <bcf:citekey order="2" intorder="1">Costa2022</bcf:citekey>
-    <bcf:citekey order="3" intorder="1">Linden2024</bcf:citekey>
-    <bcf:citekey order="4" intorder="1">Bertsimas2017</bcf:citekey>
+    <bcf:citekey order="2" intorder="1">Bertsimas2017</bcf:citekey>
+    <bcf:citekey order="2" intorder="2">Costa2022</bcf:citekey>
+    <bcf:citekey order="2" intorder="3">Rudin2019</bcf:citekey>
+    <bcf:citekey order="3" intorder="1">Costa2022</bcf:citekey>
+    <bcf:citekey order="4" intorder="1">Linden2024</bcf:citekey>
     <bcf:citekey order="5" intorder="1">Bertsimas2017</bcf:citekey>
-    <bcf:citekey order="6" intorder="1">Hyafil1976</bcf:citekey>
-    <bcf:citekey order="7" intorder="1">Bertsimas2018</bcf:citekey>
-    <bcf:citekey order="8" intorder="1">Genc2010</bcf:citekey>
-    <bcf:citekey order="9" intorder="1">Chan2019</bcf:citekey>
-    <bcf:citekey order="10" intorder="1">Wolsey2021</bcf:citekey>
-    <bcf:citekey order="11" intorder="1">Chvatal1983</bcf:citekey>
-    <bcf:citekey order="12" intorder="1">Verwer2019</bcf:citekey>
-    <bcf:citekey order="12" intorder="2">Aghaei2021</bcf:citekey>
-    <bcf:citekey order="12" intorder="3">Costa2022</bcf:citekey>
-    <bcf:citekey order="13" intorder="1">Bertsimas2017</bcf:citekey>
+    <bcf:citekey order="6" intorder="1">Bertsimas2017</bcf:citekey>
+    <bcf:citekey order="7" intorder="1">Hyafil1976</bcf:citekey>
+    <bcf:citekey order="8" intorder="1">Bertsimas2018</bcf:citekey>
+    <bcf:citekey order="9" intorder="1">Genc2010</bcf:citekey>
+    <bcf:citekey order="10" intorder="1">Chan2019</bcf:citekey>
+    <bcf:citekey order="11" intorder="1">Wolsey2021</bcf:citekey>
+    <bcf:citekey order="12" intorder="1">Chvatal1983</bcf:citekey>
+    <bcf:citekey order="13" intorder="1">Verwer2019</bcf:citekey>
+    <bcf:citekey order="13" intorder="2">Aghaei2021</bcf:citekey>
+    <bcf:citekey order="13" intorder="3">Costa2022</bcf:citekey>
+    <bcf:citekey order="14" intorder="1">Verwer2019</bcf:citekey>
+    <bcf:citekey order="15" intorder="1">Gurobi</bcf:citekey>
+    <bcf:citekey order="16" intorder="1">Aghaei2021</bcf:citekey>
+    <bcf:citekey order="17" intorder="1">Chvatal1983</bcf:citekey>
+    <bcf:citekey order="18" intorder="1">Chvatal1983</bcf:citekey>
+    <bcf:citekey order="19" intorder="1">Chvatal1983</bcf:citekey>
+    <bcf:citekey order="20" intorder="1">Wolsey2021</bcf:citekey>
   </bcf:section>
   <!-- SORTING TEMPLATES -->
   <bcf:sortingtemplate name="nty">
