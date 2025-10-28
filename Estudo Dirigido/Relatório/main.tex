@@ -62,7 +62,7 @@ representadas pelos retângulos, referentes às características do conjunto de 
     \centering
     \includegraphics[width=0.7\textwidth, height=12cm]{Decision Tree V2.png}
     \caption{Árvore de decisão para fabricação de um medicamento hipotético.
-    Nós internos da árvore representam perguntas aplicadas a
+    Nós internos da árvore representam perguntas aplicadas às
     características dos dados. As ligações correspondem ao caminho a seguir dependendo do resultado da pergunta. Os nós folhas são classes alvo do problema, isto é, os níveis de eficácia do medicamento.}
     \label{fig:arvore-exemplo}
 \end{figure}
@@ -73,14 +73,21 @@ Algoritmos para geração de \emph{árvores de decisão} tradicionalmente as con
 
 Em 2017, Bertsimas e Dunn \cite{Bertsimas2017} propuseram a possibilidade de gerar árvores de decisão \emph{ótimas}. Ao construir globalmente a árvore que melhor representa os dados, esta técnica permite aliar explicabilidade e precisão na categorização. 
 
-Contudo, o problema de gerar árvores ótimas é NP-Difícil \cite{Hyafil1976}, ou seja, não se conhecem algoritmos que o resolvam em tempo polinomial. Esta complexidade contrasta com o potencial de aplicação destes modelos na resolução de problemas práticos, como no cálculo de risco em cirurgias de emergência \cite{Bertsimas2018}, no aumento da segurança dinâmica em sistemas de energia elétrica \cite{Genc2010} ou na recomendação de políticas sociais \cite{Chan2019}. Apesar de difícil, o impacto do uso deste método evidencia a necessidade de desenvolver algoritmos computacionalmente eficazes. 
+Contudo, o problema de gerar árvores ótimas é NP-Difícil \cite{Hyafil1976},
+ou seja, não se conhece algoritmos que o resolva em tempo polinomial.
+Esta complexidade contrasta com o potencial de aplicação destes
+modelos na resolução de problemas práticos, como no cálculo de risco em cirurgias
+de emergência \cite{Bertsimas2018}, no aumento da segurança dinâmica em sistemas
+de energia elétrica \cite{Genc2010} ou na recomendação de políticas sociais \cite{Chan2019}.
+Apesar de difícil, o impacto do uso deste método evidencia a necessidade
+de desenvolver algoritmos computacionalmente eficientes. 
 
-Portanto, o objetivo principal deste Estudo Dirigido consistiu no estudo de técnicas de
+Portanto, o objetivo principal deste Estudo Dirigido consiste no estudo de técnicas de
 Programação Linear Inteira (PLI) para a formulação do problema, em paralelo com a leitura
 de artigos sobre modelos e funcionamento de árvores de decisão.
-A partir disso, partiu-se para o estudo da otimalidade nestas árvores,
+A partir disso, estudamos a otimalidade nestas árvores,
 bem como a análise do impacto de possíveis formulações e características a serem otimizadas.
-Além disso, buscou-se introduzir a aluna às práticas acadêmicas,
+De forma complementar, o projeto busca introduzir a aluna às práticas acadêmicas,
 contribuindo para sua formação e eventual iniciação científica.
 
 \section{Atividades} \label{sec:atividades}
@@ -91,12 +98,13 @@ Paralelamente, a aluna também aprofundou os conhecimentos sobre árvores de dec
 perceber nuances, limitações e potencialidades desses modelos em diferentes contextos.
 
 Em seguida, deu-se a análise de como PLI pode ser utilizada para otimizar características
-relevantes em árvores de decisão. Artigos que exploram e evidenciam essas aplicações, como
-\cite{Verwer2019, Aghaei2021, Costa2022} foram estudados.
+relevantes em árvores de decisão. Entre as referências consultadas, os trabalhos de Aghaei et al.
+\cite{Aghaei2021}, Verwer e Zhang \cite{Verwer2019} e Costa et al. \cite{Costa2022} exploram 
+diferentes formulações e objetivos de otimização para árvores de decisão ótimas.
 
 Adicionalmente, o acompanhamento semanal das reuniões da equipe de pesquisa foi importante 
 para a troca de conhecimentos e esclarecimento de dúvidas ao longo do Estudo Dirigido. Neste contexto,
-a estudante realizou uma apresentação acerca da formulação de Verwer e Zhang \cite{Verwer2019}.
+a estudante realizou um seminário acerca da formulação de Verwer e Zhang \cite{Verwer2019}.
 
 Por fim, a aluna também se familiarizou com o uso de \emph{solvers} de PLI,
 como o \emph{software} Gurobi \cite{Gurobi}, ao implementar a formulação proposta
@@ -111,7 +119,10 @@ Em seguida, são apresentados os principais tópicos estudados ao longo do perí
 
 Ao decorrer do Estudo Dirigido, foram estudados diversos conceitos fundamentais de Programação Linear e Programação Linear Inteira.
 
-\emph{Programação Linear} (PL) é uma técnica utilizada no processo de modelagem e resolução de problemas de otimização \cite{Chvatal1983}. Estes problemas envolvem a busca pela melhor solução, segundo um critério de custo ou valor, em um conjunto enumerável de possibilidades. Um programa linear na forma padrão é escrito como:
+\emph{Programação Linear} (PL) é uma técnica utilizada no processo de modelagem
+e resolução de problemas de otimização \cite{Chvatal1983}. Estes problemas envolvem
+a busca pela melhor solução, segundo um critério de custo ou valor, em um conjunto enumerável
+de possibilidades. Um programa linear na forma padrão é escrito como:
 
 \begin{alignat}{4}
 &&\text{maximize}   \quad && \sum_{j = 1}^{n} c_j x_j \label{equa:obj1}\\
@@ -128,7 +139,7 @@ nenhuma solução viável, o problema é chamado de \textit{inviável} e, para o
 Entre as técnicas utilizadas para resolver problemas de PL, está o \textit{método simplex} \cite{Chvatal1983}.
 A partir de uma solução viável inicial, o \textit{simplex} realiza iterativamente o processo de pivotamento,
 isto é, a troca de variáveis, visando melhorar o valor da função objetivo. Apesar de ter complexidade exponencial no pior caso,
-o \textit{simplex} apresenta desempenho eficiente, na prática.
+o \textit{simplex} é rápido, na prática.
 
 Um dos conceitos centrais em Programação Linear é a \textit{dualidade}, isto é, a partir de um programa linear
 $LP(P)$ de maximização, chamado de \textit{primal}, é possível obter um programa $LP(D)$ de minimização, chamado
@@ -141,11 +152,19 @@ de \textit{dual}.
 \end{alignat}
 
 Qualquer problema linear pode ser associado a um dual,
-cuja função objetivo e restrições são construídas a partir dos coeficientes do primal. 
+cuja função objetivo e restrições são construídas a partir dos coeficientes e parâmetros do primal.
 
 Um \emph{Programa Linear Inteiro} (PLI) é um PL com a restrição adicional de que todas as variáveis devem assumir valores inteiros.
 Problemas de PLI são NP-Completo, mas, na prática, é possível resolver instâncias específicas de PLI de forma eficiente, graças ao desenvolvimento de algoritmos exatos,
 técnicas de otimização e heurísticas eficazes \cite{Wolsey2021}.
+
+Uma das técnicas utilizadas para resolver problemas de PLI é o método \emph{branch-and-bound} \cite{Wolsey2021}.
+Iterativamente, o algoritmo resolve a \emph{relaxação linear} do PLI, isto é, o PL obtido ao remover as restrições de integralidade,
+e, caso a solução não seja inteira, divide o problema original em partes menores, formando uma árvore de subproblemas.
+Caso o valor da solução da relaxação linear no nó não seja viável ou não supere
+o melhor valor encontrado até o momento, não é necessário explorar os filhos deste nó, o que reduz o espaço de busca.
+Ainda, se a solução da relaxação linear obtida em um nó for inteira, esta solução é viável para o PLI original
+e pode ser utilizada para atualizar a melhor solução encontrada, denominada \emph{incumbente}.
 
 \subsection{Árvores de Decisão Ótimas}
 
