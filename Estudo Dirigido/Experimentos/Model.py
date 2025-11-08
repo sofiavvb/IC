@@ -5,14 +5,15 @@ from Tree import Tree
 
 class Model:
 
-    def __init__(self, depth: int, tree: Tree, data: pd.DataFrame):
+    def __init__(self, depth: int, tree: Tree, data: pd.DataFrame, time_limit: int):
         self.depth = depth
         self.tree = tree
         self.model = gp.Model("FlowAghaei")
         self.label = "target" #nome da coluna da previsão da categoria no dataset
         self.values = data.index 
-        self.features = self.data.drop(self.label, axis=1).columns #nomes das colunas de features (exclui a coluna target)
+        self.features = data.drop(self.label, axis=1).columns #nomes das colunas de features (exclui a coluna target)
         self.classes = data[self.label].unique() #valores únicos da coluna target (classes)
+        self.model.params.TimeLimit = time_limit
 
         ## Variáveis do modelo ##
 
