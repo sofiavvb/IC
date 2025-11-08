@@ -6,8 +6,9 @@ def run_experiment(depth: int, dataset_path: str, data: pd.DataFrame):
     #criar a arvore
     tree = Tree(depth)
     #criar o modelo
-    model = Model(depth, tree, data)
+    flowAghaei = Model(depth, tree, data)
     #rodar modelo
+    flowAghaei.model.update()
     #coletar resultados e preparar o formato de output
 
 def main():

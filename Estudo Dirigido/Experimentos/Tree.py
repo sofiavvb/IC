@@ -10,10 +10,10 @@ class Tree:
     def get_depth(self):
         return self.depth
 
-    def left_child(self, node):
+    def left(self, node):
         return 2 * node
 
-    def right_child(self, node):
+    def right(self, node):
         return 2 * node + 1
 
     def get_nodes(self):
