@@ -27,7 +27,6 @@ class Model:
         self.w = self.model.addVars(self.tree.leaves, self.classes, vtype=GRB.BINARY, name="w")        
         #z_(i,n) -> quantidade de fluxo do valor i que passa pelo no n.
         self.z = self.model.addVars(self.values, self.tree.nodes + self.tree.leaves, vtype=GRB.BINARY, name="z")
-        #TODO: adicionar variaveis de fluxo z faltantes
         #z_(n, t) -> quantidade de fluxo para o dado i que passa pela aresta da folha n para o sorvedouro t
         self.z_t = self.model.addVars(self.values, self.tree.leaves, vtype=GRB.BINARY, name="z_t")
 
