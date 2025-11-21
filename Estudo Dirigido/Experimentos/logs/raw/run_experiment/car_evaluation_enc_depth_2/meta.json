@@ -1,0 +1,8 @@
+{
+    "build_name": "run_experiment",
+    "instance_name": "car_evaluation_enc.csv",
+    "instance_path": "../Experimentos/datasets/categorical/car_evaluation_enc.csv",
+    "command": "./../Experimentos/run_experiment.py -i ../Experimentos/datasets/categorical/car_evaluation_enc.csv --depth 2",
+    "wall_time_seconds": null,
+    "exit_code": 0
+}
