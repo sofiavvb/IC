@@ -1,0 +1,2 @@
+Instance,Time,Best Bound,Best Objective,Gap,Nodes,Simplex Iterations,Depth,Root Time,Root Bound,Root Obj,Root Iterations,Filename
+car_evaluation_enc.csv,87.72656922787428,1344.0,1344.0,0.0,549,300171,2,1.66,1695.5,69.0,7946,../251125_175746/depth-2/run_experiment.py_car_evaluation_enc.csv/stdout.log

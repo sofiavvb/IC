@@ -1,0 +1,13 @@
+Instance,Time,Best Bound,Best Objective,Gap,Nodes,Simplex Iterations,Depth,Root Time,Root Bound,Root Obj,Root Iterations,Filename,instance_name
+kr-vs-kp_enc.csv,600.0,2778.0,2778.0,0.0,3715,9077748,2,11.51,3196.0,1741.0,14634,logs/raw/251125_175746/depth-2/run_experiment.py_kr-vs-kp_enc.csv/stdout.log,run_experiment.py_kr-vs-kp_enc.csv
+monk2_enc.csv,10.96403742581606,112.0,112.0,0.0,2524,145551,2,0.04,169.0,74.0,626,logs/raw/251125_175746/depth-2/run_experiment.py_monk2_enc.csv/stdout.log,run_experiment.py_monk2_enc.csv
+hayes-roth_enc.csv,2.9769533947110176,80.0,80.0,0.0,392,27725,2,0.03,132.0,45.0,629,logs/raw/251125_175746/depth-2/run_experiment.py_hayes-roth_enc.csv/stdout.log,run_experiment.py_hayes-roth_enc.csv
+soybean-small_enc.csv,1.422658048570156,47.0,47.0,0.0,34,5932,2,0.01,47.0,11.0,243,logs/raw/251125_175746/depth-2/run_experiment.py_soybean-small_enc.csv/stdout.log,run_experiment.py_soybean-small_enc.csv
+house-votes-84_enc.csv,3.1769156232476234,225.0,225.0,0.0,60,20133,2,0.05,232.0,50.0,767,logs/raw/251125_175746/depth-2/run_experiment.py_house-votes-84_enc.csv/stdout.log,run_experiment.py_house-votes-84_enc.csv
+spect_enc.csv,14.394184432923794,212.0,212.0,0.0,1374,119253,2,0.25,244.5,176.0,2407,logs/raw/251125_175746/depth-2/run_experiment.py_spect_enc.csv/stdout.log,run_experiment.py_spect_enc.csv
+breast-cancer_enc.csv,25.38548246771097,215.0,215.0,0.0,1801,278591,2,0.1,277.0,188.0,989,logs/raw/251125_175746/depth-2/run_experiment.py_breast-cancer_enc.csv/stdout.log,run_experiment.py_breast-cancer_enc.csv
+monk3_enc.csv,3.277860052883625,114.0,114.0,0.0,41,18514,2,0.02,122.0,89.0,443,logs/raw/251125_175746/depth-2/run_experiment.py_monk3_enc.csv/stdout.log,run_experiment.py_monk3_enc.csv
+monk1_enc.csv,3.6825265288352966,102.0,102.0,0.0,145,27728,2,0.02,124.0,68.0,437,logs/raw/251125_175746/depth-2/run_experiment.py_monk1_enc.csv/stdout.log,run_experiment.py_monk1_enc.csv
+balance-scale_enc.csv,35.9009847715497,426.0,426.0,0.0,293,119907,2,1.86,538.0,49.0,9209,logs/raw/251125_175746/depth-2/run_experiment.py_balance-scale_enc.csv/stdout.log,run_experiment.py_balance-scale_enc.csv
+car_evaluation_enc.csv,87.72656922787428,1344.0,1344.0,0.0,549,300171,2,1.66,1695.5,69.0,7946,logs/raw/251125_175746/depth-2/run_experiment.py_car_evaluation_enc.csv/stdout.log,run_experiment.py_car_evaluation_enc.csv
+tic-tac-toe_enc.csv,267.03057197481394,676.0,676.0,0.0,1854,1193782,2,1.89,958.0,581.0,5772,logs/raw/251125_175746/depth-2/run_experiment.py_tic-tac-toe_enc.csv/stdout.log,run_experiment.py_tic-tac-toe_enc.csv

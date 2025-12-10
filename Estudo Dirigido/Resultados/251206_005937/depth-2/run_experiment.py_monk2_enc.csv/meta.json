@@ -1,0 +1,8 @@
+{
+    "build_name": "depth-2",
+    "instance_name": "monk2_enc.csv",
+    "instance_path": "/home/sofia/Experimentos/datasets/categorical/monk2_enc.csv",
+    "command": "timeout 3600s /home/sofia/Experimentos/run_experiment.py -i /home/sofia/Experimentos/datasets/categorical/monk2_enc.csv --depth 2",
+    "wall_time_seconds": 12.413726530969143,
+    "exit_code": 0
+}

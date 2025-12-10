@@ -1,3 +1,4 @@
+#!/usr/bin/env python3
 import gurobipy as gp
 from gurobipy import GRB
 import pandas as pd
@@ -5,7 +6,7 @@ from Tree import Tree
 
 class Model:
 
-    def __init__(self, depth: int, tree: Tree, data: pd.DataFrame, time_limit: int):
+    def __init__(self, depth: int, tree: Tree, data: pd.DataFrame):
         self.depth = depth
         self.tree = tree
         self.model = gp.Model("FlowAghaei")
@@ -13,7 +14,8 @@ class Model:
         self.values = data.index 
         self.features = data.drop(self.label, axis=1).columns #nomes das colunas de features (exclui a coluna target)
         self.classes = data[self.label].unique() #valores únicos da coluna target (classes)
-        self.model.params.TimeLimit = time_limit
+        self.model.setParam("Threads", 1)  # limitar a 1 thread
+
 
         ## Variáveis do modelo ##
 

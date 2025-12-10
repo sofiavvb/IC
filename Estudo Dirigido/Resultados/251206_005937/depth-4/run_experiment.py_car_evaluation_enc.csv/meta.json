@@ -1,0 +1,8 @@
+{
+    "build_name": "depth-4",
+    "instance_name": "car_evaluation_enc.csv",
+    "instance_path": "/home/sofia/Experimentos/datasets/categorical/car_evaluation_enc.csv",
+    "command": "timeout 3600s /home/sofia/Experimentos/run_experiment.py -i /home/sofia/Experimentos/datasets/categorical/car_evaluation_enc.csv --depth 4",
+    "wall_time_seconds": 3600,
+    "exit_code": 124
+}

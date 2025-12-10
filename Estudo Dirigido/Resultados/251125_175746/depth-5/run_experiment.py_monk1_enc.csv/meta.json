@@ -1,0 +1,8 @@
+{
+    "build_name": "depth-5",
+    "instance_name": "monk1_enc.csv",
+    "instance_path": "/home/sofia/Experimentos/datasets/categorical/monk1_enc.csv",
+    "command": "/home/sofia/Experimentos/run_experiment.py -i /home/sofia/Experimentos/datasets/categorical/monk1_enc.csv --depth 5",
+    "wall_time_seconds": 24.741386398673058,
+    "exit_code": 0
+}

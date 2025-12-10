@@ -1,0 +1,8 @@
+{
+    "build_name": "depth-3",
+    "instance_name": "hayes-roth_enc.csv",
+    "instance_path": "/home/sofia/Experimentos/datasets/categorical/hayes-roth_enc.csv",
+    "command": "/home/sofia/Experimentos/run_experiment.py -i /home/sofia/Experimentos/datasets/categorical/hayes-roth_enc.csv --depth 3",
+    "wall_time_seconds": 34.744058668613434,
+    "exit_code": 0
+}

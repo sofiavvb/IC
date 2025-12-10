@@ -1,0 +1,13 @@
+Instance,Time,Best Bound,Best Objective,Gap,Nodes,Simplex Iterations,Depth,Root Time,Root Bound,Root Heu,Root Iterations,instance_name
+kr-vs-kp_enc.csv,3600.0,3196.0,1728.0,85.0,0,0,5,195.77,3196.0,-0.0,82156,run_experiment.py_kr-vs-kp_enc.csv
+monk2_enc.csv,3600.0,169.0,152.0,11.2,17360,0,5,2.55,169.0,-0.0,10291,run_experiment.py_monk2_enc.csv
+hayes-roth_enc.csv,3600.0,119.0,117.0,1.71,78897,0,5,0.48,132.0,-0.0,4422,run_experiment.py_hayes-roth_enc.csv
+soybean-small_enc.csv,2.43128253519535,47.0,47.0,0.0,1,2459,5,0.08,47.0,-0.0,1581,run_experiment.py_soybean-small_enc.csv
+house-votes-84_enc.csv,245.65262416750195,232.0,232.0,0.0,448,811971,5,1.99,232.0,-0.0,8565,run_experiment.py_house-votes-84_enc.csv
+spect_enc.csv,3600.0,250.33333,240.0,4.31,19694,0,5,8.65,255.8571,19.0,18789,run_experiment.py_spect_enc.csv
+breast-cancer_enc.csv,3600.0,277.0,242.0,14.5,20311,0,5,0.6,277.0,-0.0,7110,run_experiment.py_breast-cancer_enc.csv
+monk3_enc.csv,64.41882561892271,122.0,122.0,0.0,171,273800,5,1.05,122.0,-0.0,6840,run_experiment.py_monk3_enc.csv
+monk1_enc.csv,11.216067343950272,124.0,124.0,0.0,1,61885,5,1.08,124.0,-0.0,6686,run_experiment.py_monk1_enc.csv
+balance-scale_enc.csv,3600.0,625.0,505.0,23.8,582,0,5,0.72,625.0,-0.0,7083,run_experiment.py_balance-scale_enc.csv
+car_evaluation_enc.csv,3600.0,1728.0,1287.0,34.3,0,0,5,59.24,1728.0,-0.0,52959,run_experiment.py_car_evaluation_enc.csv
+tic-tac-toe_enc.csv,3600.0,958.0,856.0,11.9,564,0,5,0.98,958.0,-0.0,5161,run_experiment.py_tic-tac-toe_enc.csv

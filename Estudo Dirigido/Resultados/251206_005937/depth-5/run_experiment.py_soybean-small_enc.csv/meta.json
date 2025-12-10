@@ -1,0 +1,8 @@
+{
+    "build_name": "depth-5",
+    "instance_name": "soybean-small_enc.csv",
+    "instance_path": "/home/sofia/Experimentos/datasets/categorical/soybean-small_enc.csv",
+    "command": "timeout 3600s /home/sofia/Experimentos/run_experiment.py -i /home/sofia/Experimentos/datasets/categorical/soybean-small_enc.csv --depth 5",
+    "wall_time_seconds": 2.4312825351953506,
+    "exit_code": 0
+}

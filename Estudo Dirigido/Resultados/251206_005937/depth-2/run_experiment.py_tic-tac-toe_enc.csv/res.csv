@@ -1,0 +1,2 @@
+Instance,Time,Best Bound,Best Objective,Gap,Nodes,Simplex Iterations,Depth,Root Time,Root Bound,Root Heu,Root Iterations
+tic-tac-toe_enc.csv,278.7164806649089,676.0,676.0,0.0,1854,1193782,2,2.0,958.0,581.0,5772

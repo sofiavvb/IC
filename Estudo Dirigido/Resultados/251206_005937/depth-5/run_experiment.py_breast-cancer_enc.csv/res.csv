@@ -1,0 +1,2 @@
+Instance,Time,Best Bound,Best Objective,Gap,Nodes,Simplex Iterations,Depth,Root Time,Root Bound,Root Heu,Root Iterations
+breast-cancer_enc.csv,3600,277.0,242.0,14.5,20311,0,5,0.6,277.0,-0.0,7110

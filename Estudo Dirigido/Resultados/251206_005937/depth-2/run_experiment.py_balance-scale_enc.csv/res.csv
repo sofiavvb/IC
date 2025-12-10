@@ -1,0 +1,2 @@
+Instance,Time,Best Bound,Best Objective,Gap,Nodes,Simplex Iterations,Depth,Root Time,Root Bound,Root Heu,Root Iterations
+balance-scale_enc.csv,35.4042953774333,426.0,426.0,0.0,293,119907,2,1.73,538.0,49.0,9209

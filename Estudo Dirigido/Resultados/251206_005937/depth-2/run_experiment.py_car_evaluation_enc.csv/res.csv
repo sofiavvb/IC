@@ -1,0 +1,2 @@
+Instance,Time,Best Bound,Best Objective,Gap,Nodes,Simplex Iterations,Depth,Root Time,Root Bound,Root Heu,Root Iterations
+car_evaluation_enc.csv,93.90632455050945,1344.0,1344.0,0.0,549,300171,2,1.77,1695.5,69.0,7946

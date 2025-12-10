@@ -1,0 +1,8 @@
+{
+    "build_name": "depth-2",
+    "instance_name": "spect_enc.csv",
+    "instance_path": "/home/sofia/Experimentos/datasets/categorical/spect_enc.csv",
+    "command": "timeout 3600s /home/sofia/Experimentos/run_experiment.py -i /home/sofia/Experimentos/datasets/categorical/spect_enc.csv --depth 2",
+    "wall_time_seconds": 15.92105969041586,
+    "exit_code": 0
+}

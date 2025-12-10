@@ -1,0 +1,2 @@
+Instance,Time,Best Bound,Best Objective,Gap,Nodes,Simplex Iterations,Depth,Root Time,Root Bound,Root Heu,Root Iterations
+house-votes-84_enc.csv,4.982275620102882,225.0,225.0,0.0,60,20133,2,0.07,232.0,50.0,767

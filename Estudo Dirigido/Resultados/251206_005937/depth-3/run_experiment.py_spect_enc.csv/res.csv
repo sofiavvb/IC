@@ -1,0 +1,2 @@
+Instance,Time,Best Bound,Best Objective,Gap,Nodes,Simplex Iterations,Depth,Root Time,Root Bound,Root Heu,Root Iterations
+spect_enc.csv,1153.8952627927065,219.0,219.0,0.0,52140,13124986,3,1.28,250.0,160.0,6709

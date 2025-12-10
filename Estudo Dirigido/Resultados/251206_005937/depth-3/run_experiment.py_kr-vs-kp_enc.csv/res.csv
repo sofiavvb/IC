@@ -1,0 +1,2 @@
+Instance,Time,Best Bound,Best Objective,Gap,Nodes,Simplex Iterations,Depth,Root Time,Root Bound,Root Heu,Root Iterations
+kr-vs-kp_enc.csv,3600,3196.0,2658.0,20.2,597,0,3,14.74,3196.0,1741.0,10456

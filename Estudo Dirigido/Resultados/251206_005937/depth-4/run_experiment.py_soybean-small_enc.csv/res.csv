@@ -1,0 +1,2 @@
+Instance,Time,Best Bound,Best Objective,Gap,Nodes,Simplex Iterations,Depth,Root Time,Root Bound,Root Heu,Root Iterations
+soybean-small_enc.csv,1.523226261138916,47.0,47.0,0.0,1,3017,4,0.14,47.0,-0.0,2075

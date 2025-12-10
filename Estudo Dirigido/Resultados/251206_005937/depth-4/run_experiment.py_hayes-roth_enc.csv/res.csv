@@ -1,0 +1,2 @@
+Instance,Time,Best Bound,Best Objective,Gap,Nodes,Simplex Iterations,Depth,Root Time,Root Bound,Root Heu,Root Iterations
+hayes-roth_enc.csv,3600,115.0,111.0,3.6,769783,0,4,0.11,132.0,10.0,1049

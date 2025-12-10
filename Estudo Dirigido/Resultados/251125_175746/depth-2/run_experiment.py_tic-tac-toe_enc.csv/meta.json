@@ -1,0 +1,8 @@
+{
+    "build_name": "depth-2",
+    "instance_name": "tic-tac-toe_enc.csv",
+    "instance_path": "/home/sofia/Experimentos/datasets/categorical/tic-tac-toe_enc.csv",
+    "command": "/home/sofia/Experimentos/run_experiment.py -i /home/sofia/Experimentos/datasets/categorical/tic-tac-toe_enc.csv --depth 2",
+    "wall_time_seconds": 267.03057197481394,
+    "exit_code": 0
+}

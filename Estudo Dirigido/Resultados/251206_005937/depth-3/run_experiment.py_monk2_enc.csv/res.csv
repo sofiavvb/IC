@@ -1,0 +1,2 @@
+Instance,Time,Best Bound,Best Objective,Gap,Nodes,Simplex Iterations,Depth,Root Time,Root Bound,Root Heu,Root Iterations
+monk2_enc.csv,1058.3695256114006,128.0,128.0,0.0,132017,18186728,3,0.14,169.0,79.0,1176

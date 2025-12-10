@@ -1,6 +1,7 @@
 \documentclass[12pt,a4paper]{article}
 
 \usepackage[a4paper, left=2.5cm, right=2.5cm, top=3cm, bottom=3cm]{geometry}  
+\usepackage[utf8]{inputenc}
 \usepackage[brazil]{babel}  
 \usepackage{float}  
 \usepackage{csquotes}
@@ -15,7 +16,6 @@
 \usepackage{array}     
 \usepackage{amssymb}
 \usepackage{bookmark} 
-\usepackage[utf8]{inputenc}
 \usepackage[
      date=year,
      backend=biber,
@@ -60,26 +60,26 @@ representadas pelos retângulos, referentes às características do conjunto de 
 
 \begin{figure}[H]
     \centering
-    \includegraphics[width=0.7\textwidth, height=12cm]{Decision Tree V2.png}
-    \caption{Árvore de decisão para fabricação de um medicamento hipotético.
-    Nós internos da árvore representam perguntas aplicadas às
-    características dos dados. As ligações correspondem ao caminho a seguir dependendo do resultado da pergunta. Os nós folhas são classes alvo do problema, isto é, os níveis de eficácia do medicamento.}
+    \includegraphics[width=.9\textwidth]{sofia.pdf}
+    \caption{Exemplo de uma árvore de decisão para previsão da eficácia de um medicamento hipotético.
+    Nós não folha da árvore representam testes aplicados às
+    características dos dados. Os arcos correspondem ao caminho a seguir dependendo do resultado do teste. Os nós folhas são classes alvo do problema, isto é,
+    os níveis de eficácia do medicamento e a previsão atribuída aos dados que percorrem o caminho.}
     \label{fig:arvore-exemplo}
 \end{figure}
 
-Uma vantagem associada a estas árvores é a facilidade de extrair informações relevantes, conceito chamado de \emph{explicabilidade} \cite{Bertsimas2017, Costa2022, Rudin2019}. Assim, estas árvores evidenciam quais atributos foram mais importantes para a tomada de decisão. Por exemplo, o medicamento funciona eficientemente para pacientes do sexo masculino, com até 60 anos e que receberam dosagem acima de 35. Este agrupamento facilita a interpretação do modelo e a obtenção de novas hipóteses.
+Uma vantagem associada a este modelo de previsão é a facilidade de extrair informações relevantes e as decisões tomadas, conceito chamado de \emph{explicabilidade} \cite{Bertsimas2017, Costa2022, Rudin2019}. Assim, estas árvores evidenciam quais atributos foram mais importantes para a tomada de decisão. Por exemplo, o medicamento funciona eficientemente para pacientes do sexo masculino, com até 60 anos e que receberam dosagem acima de 35. Este agrupamento facilita a interpretação do modelo e a obtenção de novas hipóteses.
 
-Algoritmos para geração de \emph{árvores de decisão} tradicionalmente as constroem de forma heurística, realizando recursivamente escolhas locais ótimas em cada nó \cite{Costa2022}. Apesar de obter resultados razoáveis na prática \cite{Linden2024}, este processo pode deixar de capturar pontos essenciais dos \textit{datasets} \cite{Bertsimas2017}.
+Algoritmos para geração de árvores de decisão tradicionalmente as constroem de forma heurística, realizando recursivamente escolhas locais ótimas em cada nó \cite{Costa2022}. Apesar de obter resultados razoáveis na prática \cite{Linden2024}, este processo pode deixar de capturar pontos essenciais dos \textit{datasets} \cite{Bertsimas2017}.
 
 Em 2017, Bertsimas e Dunn \cite{Bertsimas2017} propuseram a possibilidade de gerar árvores de decisão \emph{ótimas}. Ao construir globalmente a árvore que melhor representa os dados, esta técnica permite aliar explicabilidade e precisão na categorização. 
 
-Contudo, o problema de gerar árvores ótimas é NP-Difícil \cite{Hyafil1976},
-ou seja, não se conhece algoritmos que o resolva em tempo polinomial.
+Contudo, o problema de gerar árvores ótimas é NP-Difícil \cite{Hyafil1976} e, portanto, não se conhece algoritmos que o resolva em tempo polinomial.
 Esta complexidade contrasta com o potencial de aplicação destes
 modelos na resolução de problemas práticos, como no cálculo de risco em cirurgias
-de emergência \cite{Bertsimas2018}, no aumento da segurança dinâmica em sistemas
+de emergência \cite{Bertsimas2018}, no aumento da segurança em sistemas
 de energia elétrica \cite{Genc2010} ou na recomendação de políticas sociais \cite{Chan2019}.
-Apesar de difícil, o impacto do uso deste método evidencia a necessidade
+Apesar da dificuldade, o impacto do uso deste método evidencia a necessidade
 de desenvolver algoritmos computacionalmente eficientes. 
 
 Portanto, o objetivo principal deste Estudo Dirigido consiste no estudo de técnicas de
@@ -93,13 +93,14 @@ contribuindo para sua formação e eventual iniciação científica.
 \section{Atividades} \label{sec:atividades}
 
 O primeiro passo compreendeu o estudo dos fundamentos de Programação Linear Inteira,
-utilizando os livros de Wolsey \cite{Wolsey2021} e Chvátal \cite{Chvatal1983}.
-Paralelamente, a aluna também aprofundou os conhecimentos sobre árvores de decisão, de modo a conseguir
+utilizando os livros de Wolsey \cite{Wolsey2021} e Chvátal \cite{Chvatal1983}. Ademais, a aluna
+também estudou sobre o método de geração de colunas, a partir do livro de Uchoa et al. \cite{Uchoa2024}.
+Paralelamente, a estudante aprofundou os conhecimentos sobre árvores de decisão, de modo a conseguir
 perceber nuances, limitações e potencialidades desses modelos em diferentes contextos.
 
 Em seguida, deu-se a análise de como PLI pode ser utilizada para otimizar características
-relevantes em árvores de decisão. Entre as referências consultadas, os trabalhos de Aghaei et al.
-\cite{Aghaei2021}, Verwer e Zhang \cite{Verwer2019} e Costa et al. \cite{Costa2022} exploram 
+relevantes em árvores de decisão. Entre as referências estudadas, os trabalhos de Aghaei et al.
+\cite{Aghaei24}, Verwer e Zhang \cite{Verwer2019} e Costa et al. \cite{Costa2022} exploram 
 diferentes formulações e objetivos de otimização para árvores de decisão ótimas.
 
 Adicionalmente, o acompanhamento semanal das reuniões da equipe de pesquisa foi importante 
@@ -108,7 +109,7 @@ a estudante realizou um seminário acerca da formulação de Verwer e Zhang \cit
 
 Por fim, a aluna também se familiarizou com o uso de \emph{solvers} de PLI,
 como o \emph{software} Gurobi \cite{Gurobi}, ao implementar a formulação proposta
-por Aghaei et al. \cite{Aghaei2021}. Essa etapa foi fundamental para a consolidação
+por Aghaei et al. \cite{Aghaei24}. Essa etapa foi fundamental para a consolidação
 dos conceitos teóricos estudados ao longo do período.
 
 \section{Resultados} \label{sec:resultados}
@@ -123,7 +124,6 @@ Ao decorrer do Estudo Dirigido, foram estudados diversos conceitos fundamentais 
 e resolução de problemas de otimização \cite{Chvatal1983}. Estes problemas envolvem
 a busca pela melhor solução, segundo um critério de custo ou valor, em um conjunto enumerável
 de possibilidades. Um programa linear na forma padrão é escrito como:
-
 \begin{alignat}{4}
 &&\text{maximize}   \quad && \sum_{j = 1}^{n} c_j x_j \label{equa:obj1}\\
 &&\text{sujeito a} \quad && \sum_{j = 1}^{n} a_{ij} x_j & \leq b_i     \quad && i = 1, \ldots, m \label{res:1.1} \\
@@ -134,63 +134,256 @@ A \autoref{equa:obj1} descreve a \textit{função objetivo}, isto é, a função
 Por fim, a \autoref{res:2.1} indica uma \textit{restrição de não negatividade}.
 
 Denomina-se \textit{solução viável} uma atribuição de valores a $x_j$ que satisfaz todas as restrições impostas ao problema. Já uma \textit{solução ótima} é uma solução viável que maximiza a função objetivo.
-Vale destacar que podem existir mais de uma solução ótima para o mesmo problema ou até mesmo não existir solução ótima. No caso de não existir
+Vale destacar que pode existir mais de uma solução ótima para o mesmo problema ou até mesmo não existir solução ótima. No caso de não existir
 nenhuma solução viável, o problema é chamado de \textit{inviável} e, para o caso em que as soluções viáveis permitem que a função objetivo cresça indefinidamente, os problemas são chamados de \textit{ilimitados} \cite{Chvatal1983}.
 
-Entre as técnicas utilizadas para resolver problemas de PL, está o \textit{método simplex} \cite{Chvatal1983}.
+Entre as técnicas utilizadas para resolver problemas de PL, está o \textit{método simplex}~\cite{Chvatal1983}.
 A partir de uma solução viável inicial, o \textit{simplex} realiza iterativamente o processo de pivotamento,
 isto é, a troca de variáveis, visando melhorar o valor da função objetivo. Apesar de ter complexidade exponencial no pior caso,
 o \textit{simplex} é rápido, na prática.
 
 Um dos conceitos centrais em Programação Linear é a \textit{dualidade}, isto é, a partir de um programa linear
-$LP(P)$ de maximização, chamado de \textit{primal}, é possível obter um programa $LP(D)$ de minimização, chamado
+$P$ de maximização, chamado de \textit{primal}, é possível obter um programa $D$ de minimização, chamado
 de \textit{dual}. 
-
 \begin{alignat}{4}
-&&\text{minimize}   \quad && \sum_{i = 1}^{m} b_i y_i \label{equa:obj1}\\
-&&\text{sujeito a} \quad && \sum_{i = 1}^{m} a_{ij} y_i & \geq c_j     \quad && j = 1, \ldots, n \label{res:1.1} \\
-&&                        && y_i                       & \ge 0        \quad &&  i = 1, \ldots, m \label{res:2.1}
+&&\text{minimize}   \quad && \sum_{i = 1}^{m} b_i y_i \label{equa:obj2}\\
+&&\text{sujeito a} \quad && \sum_{i = 1}^{m} a_{ij} y_i & \geq c_j     \quad && j = 1, \ldots, n \label{res:3.1} \\
+&&                        && y_i                       & \ge 0        \quad &&  i = 1, \ldots, m \label{res:4.1}
 \end{alignat}
 
 Qualquer problema linear pode ser associado a um dual,
 cuja função objetivo e restrições são construídas a partir dos coeficientes e parâmetros do primal.
 
 Um \emph{Programa Linear Inteiro} (PLI) é um PL com a restrição adicional de que todas as variáveis devem assumir valores inteiros.
-Problemas de PLI são NP-Completo, mas, na prática, é possível resolver instâncias específicas de PLI de forma eficiente, graças ao desenvolvimento de algoritmos exatos,
-técnicas de otimização e heurísticas eficazes \cite{Wolsey2021}.
+Determinar se um PLI tem solução viável com valor maior do que $K$ é um problema NP-Completo. Porém, na prática, é possível resolver instâncias específicas de PLI eficientemente,
+graças ao desenvolvimento de algoritmos exatos, técnicas de otimização e heurísticas eficazes \cite{Wolsey2021}.
 
 Uma das técnicas utilizadas para resolver problemas de PLI é o método \emph{branch-and-bound} \cite{Wolsey2021}.
 Iterativamente, o algoritmo resolve a \emph{relaxação linear} do PLI, isto é, o PL obtido ao remover as restrições de integralidade,
 e, caso a solução não seja inteira, divide o problema original em partes menores, formando uma árvore de subproblemas.
-Caso o valor da solução da relaxação linear no nó não seja viável ou não supere
-o melhor valor encontrado até o momento, não é necessário explorar os filhos deste nó, o que reduz o espaço de busca.
-Ainda, se a solução da relaxação linear obtida em um nó for inteira, esta solução é viável para o PLI original
-e pode ser utilizada para atualizar a melhor solução encontrada, denominada \emph{incumbente}.
+Se o valor da relaxação linear é menor que o melhor valor encontrado até o momento (\emph{incumbente}), sabemos que a subárvore
+não irá produzir solução melhor. Ainda, caso a solução da relaxação linear obtida em um nó for inteira, esta solução é viável para o PLI original
+e pode ser utilizada para atualizar o incumbente.
 
-\subsection{Árvores de Decisão Ótimas}
+\subsection{Árvores de Decisão}
 
-[a escrever]
+Mediante uma série de testes referentes a características de itens de
+determinado conjunto de dados, árvores de decisão são capazes de classificá-los
+em categorias. Assim como no exemplo da \nameref{sec:introducao}, elas podem ser
+usadas em diversas aplicações, como na área da medicina \cite{Richards2001, Freitas2014}
+ou finanças \cite{Dhar2000}.
 
-\subsection{Implementações e Experimentos}
+\emph{Árvores de decisão} são compostas de nós internos, que estão associados a testes
+feitas sobre atributos dos dados, e folhas, as quais são atribuídas às categorias
+designadas. Elas são construídas a partir de dados em que se conhecem as categorias,
+processo chamado de \textit{treinamento}. Após essa etapa, ao utilizar dados ainda não vistos,
+pode-se validar a previsão feita ao classificá-los corretamente.
 
-[a escrever]
+Existem diversos algoritmos para a geração dessas árvores, sendo um dos mais
+influentes o algoritmo CART (Classification and Regression Trees) \cite{Breiman2017},
+o qual utiliza formas heurísticas para tomar decisões locais, em que são utilizadas medidas de impurezas
+como o \textit{Índice de Gini}, \textit{Entropia} ou \textit{Razão de Ganho} \cite{Demirovic2020}. Além disso, o algoritmo aplica técnicas de poda, para evitar o \textit{overfitting} dos dados,
+isto é, quando o modelo se ajusta excessivamente ao conjunto de treinamento, perdendo a capacidade
+de generalizar para novos dados.
+
+Algumas características são fundamentais para obter modelos mais aplicáveis ao utilizar
+árvores de decisão. A \emph{explicabilidade}, mencionada na \nameref{sec:introducao}, é útil em
+domínios onde as decisões precisam ser justificáveis, como medicina ou direito. No entanto,
+o quão explicável é um modelo está relacionado com alguns outros fatores, como o tamanho
+da árvore e como os cortes são feitos \cite{Costa2022}. 
+
+A \emph{esparsidade}, se refere ao uso de um número reduzido de atributos para
+categorizar, o que contribui para a simplicidade do modelo e proporciona maior
+explicabilidade.
+
+Ao contrário dos métodos heurísticos, como o CART \cite{Breiman2017},
+algoritmos para obter árvores de decisão ótimas buscam construir globalmente a árvore que melhor classifica os dados \cite{Bertsimas2017}.
+Nesse contexto, o uso de PLI surge como ferramenta para abordar o problema, possibilitando avanços no
+equilíbrio entre explicabilidade sem a perda de acurácia, minimização da complexidade
+e respeito dos critérios de justiça, garantindo soluções que são não apenas precisas,
+mas também interpretáveis.
+
+\subsection{Formulação para Árvores de Decisão Ótimas}
+
+Diversos trabalhos propõem formulações de PLI para a geração de árvores de decisão ótimas.
+Dentre estes, Aghaei et al. \cite{Aghaei24} apresentam algumas variações de modelos baseados em fluxo.
+O modelo inicial proposto pelos autores considera árvores balanceadas, isto é, a distância
+da raiz até qualquer folha (onde a classificação é feita) é a mesma e todos os nós internos possuem dois filhos.
+
+Para uma profundidade $d$ fixa, a árvore possui $2^{d+1}-1$ nós, sendo que $2^d-1$ são nós internos e pertencem 
+ao conjunto $\mathcal{B}$, e $2^d$ são folhas, compondo o conjunto $ \mathcal{L}$. 
+Ademais, temos os conjuntos $\mathcal{F}$, com os atributos dos dados, $\mathcal{I}$, com as instâncias do conjunto de dados
+e $\mathcal{K}$, com as classes possíveis para categorização.
+
+As variáveis utilizadas consistem em $b_{nf}$, que indica se o atributo $f$ é utilizado no nó interno $n$;
+a variável $w_{k}^n$ que, indica se a folha $n$ prevê a classe $k$; e as variáveis $z$, 
+que modelam o fluxo de dados através da árvore.
+
+A seguir, apresentamos a formulação.
+\begin{align}
+\quad\text{maximize} \quad & \sum_{i \in \mathcal{I}}\sum_{n \in \mathcal{L}} z_{n,t}^i \label{eq:flow_obj}\\[4pt]
+\text{sujeito a} \quad
+& \sum_{f \in \mathcal{F}} b_{nf} = 1
+&& \forall n \in \mathcal{B}, 
+\label{eq:branch_nodeN_featureF}\\[4pt]
+& z_{a(n),n}^i = z_{n,l(n)}^i + z_{n,r(n)}^i
+&& \forall n \in \mathcal{B},i \in \mathcal{I},
+\label{eq:conservacao_fluxo}\\[4pt]
+& z_{a(n), n}^i = z_{n, t}^i
+&& \forall n \in \mathcal{L},i \in \mathcal{I},
+\label{eq:flow_3}\\[4pt]
+& z_{s, 1}^i \leq 1 
+&& \forall i \in \mathcal{I},
+\label{eq:flow_4}\\[4pt]
+& z_{n, l(n)}^i \leq \sum_{f \in \mathcal{F}: x_{i}^f = 0} b_{nf}
+&& \forall n \in \mathcal{B},i \in \mathcal{I},
+\label{eq:flow_5}\\[4pt]
+& z_{n, r(n)}^i \leq \sum_{f \in \mathcal{F}: x_{i}^f = 1} b_{nf}
+&& \forall n \in \mathcal{B},i \in \mathcal{I},
+\label{eq:flow_6}\\[4pt]
+& z_{n, t}^i \leq w_{y^i}^n
+&& \forall n \in \mathcal{L},i \in \mathcal{I},
+\label{eq:flow_7}\\[4pt]
+& \sum_{k \in \mathcal{K}} w_{k}^n = 1
+&& \forall n \in \mathcal{L},
+\label{eq:flow_8}
+\\[4pt]
+& w_{k}^n \in \{0,1\}
+&& \forall n \in \mathcal{L}, k \in \mathcal{K},
+\label{eq:flow_9}\\[4pt] 
+& b_{nf} \in \{0,1\}
+&& \forall n \in \mathcal{B}, f \in \mathcal{F},
+\label{eq:flow_10}\\[4pt]     
+& z_{a(n), n}^i \in \{0,1\}
+&& \forall n \in \mathcal{B} \cup \mathcal{L}, i \in \mathcal{I},
+\label{eq:flow_11} \\[4pt]
+& z_{n, t}^i \in \{0,1\}
+&& \forall n \in \mathcal{L}, i \in \mathcal{I}.
+\label{eq:flow_12}
+\end{align}
+
+A função objetivo \eqref{eq:flow_obj} maximiza o número de pontos corretamente classificados.
+A restrição \eqref{eq:branch_nodeN_featureF} garante que cada nó interno
+seja associado a exatamente um atributo na ramificação. As restrições \eqref{eq:conservacao_fluxo} e \eqref{eq:flow_3} representam a conservação de fluxo na árvore.
+A restrição \eqref{eq:flow_4} assegura que a passagem de fluxo inicie na raiz da árvore.
+As restrições~ \eqref{eq:flow_5} e \eqref{eq:flow_6} garantem que o fluxo siga o caminho correto
+dependendo do valor do atributo utilizado na ramificação, e a restrição \eqref{eq:flow_7} assegura que uma instância só
+pode ser classificada em uma folha se esta for associada à classe correta. A restrição \eqref{eq:flow_8} garante que cada folha seja associada a exatamente
+uma classe e, por fim, as restrições restantes indicam que todas as variáveis são binárias.
+\subsection{Experimentos}
+
+Com o objetivo de consolidar os aprendizados obtidos por meio do estudo teórico, a aluna realizou uma etapa de experimentos computacionais.
+O modelo escolhido para implementação durante o Estudo Dirigido foi o primeiro apresentado por Aghaei et al. \cite{Aghaei24}.
+É válido mencionar, entretanto, que os autores propõem outras variações de modelos. Dentre estas, há a formulação para árvores desbalanceadas
+e a que utiliza a técnica de \emph{Decomposição de Benders}, descrita no livro de Wolsey \cite{Wolsey2021}.
+
+Todos os experimentos foram conduzidos em um processador Intel Xeon CPU E5-2630 v4 @ 2.20GHz
+com 64 GB de RAM. O sistema operacional utilizado foi o Ubuntu 20.04.3. Os códigos foram 
+escritos em Python 3.10.12. Para a resolução do modelo de PLI, utilizamos o \emph{solver}
+Gurobi 12.0.0 \cite{Gurobi}. 
+
+Cada instância foi executada com um limite de tempo de uma hora, semelhantemente ao realizado por
+Aghaei et al.\cite{Aghaei24}. Para cada conjunto de dados, analisamos o comportamento do modelo para árvores de profundidade $d \in \{2, 3, 4, 5\}$. Além disso, para garantir uma comparação justa, utilizamos somente uma \emph{thread} durante o processo experimental.
+
+Na \autoref*{tab:instancias}, apresentamos as características das instâncias utilizadas.
+\begin{table}[H]
+    \centering
+    \renewcommand{\arraystretch}{1.2} 
+    \setlength{\tabcolsep}{40pt}
+    \begin{tabular}{lrrr}
+        \toprule
+            Instância       & $I$    & $F$  & $K$ \\ 
+        \midrule
+            soybean-small  & 47   & 45 & 4 \\ 
+            monk3          & 122  & 15 & 2 \\ 
+            monk1          & 124  & 15 & 2 \\ 
+            hayes-roth     & 132  & 15 & 3 \\ 
+            monk2          & 169  & 15 & 2 \\ 
+            house-votes-84 & 232  & 16 & 2 \\ 
+            spect          & 267  & 22 & 2 \\ 
+            breast-cancer  & 277  & 38 & 2 \\ 
+            balance-scale  & 625  & 20 & 3 \\ 
+            tic-tac-toe    & 958  & 27 & 2 \\ 
+            car-evaluation & 1728 & 20 & 4 \\ 
+            kr-vs-kp       & 3196 & 38 & 2 \\   
+        \bottomrule 
+    \end{tabular}
+    \caption{Características dos conjuntos de dados utilizados nos experimentos.
+    Todas as instâncias possuem apenas atributos categóricos. $I$ representa
+    a quantidade de dados, $F$ o número de atributos e $K$ o número de classes.}
+    \label{tab:instancias}
+\end{table}
+
+Na \autoref*{tab:resultados}, reportamos o tempo de execução para resolver as 
+instâncias testadas.
+
+\begin{table}[H]
+    \centering
+    \renewcommand{\arraystretch}{1.2} 
+    \setlength{\tabcolsep}{25pt}
+    \begin{tabular}{lrrrr}
+    \hline
+    Instância      & $d=2$  & $d=3$  & $d=4$  & $d=5$ \\ \hline
+    soybean-small  & 2.92   & 1.12    & 1.52   & 2.43   \\
+    monk3          & 4.78   & 104.33  & * & 64.42  \\
+    monk1          & 5.43   & 59.87   & 49.33  & 11.22  \\
+    hayes-roth     & 4.46   & 33.61   & * & * \\
+    monk2          & 12.41  & 1058.37 & * & * \\
+    house-votes-84 & 4.98   & 140.18  & 987.01 & 245.65 \\
+    spect          & 15.92  & 1153.90 & * & * \\
+    breast-cancer  & 25.21  & * & * & * \\
+    balance-scale  & 35.40  & 1142.80 & * & * \\
+    tic-tac-toe    & 278.72 & * & * & * \\
+    car-evaluation & 93.91  & * & * & * \\
+    kr-vs-kp       & * & * & * & * \\ \hline
+    \end{tabular}
+    \caption{Tempo de execução para resolver as instâncias testadas, em segundos. Nos casos em que o tempo limite foi 
+atingido, indicamos por ``*".}
+    \label{tab:resultados}
+\end{table}
+
+Notamos que, ao aumentar a profundidade $d$ da árvore para $4$ ou $5$,
+diversas instâncias não foram resolvidas no tempo limite de $1$ hora. Isto pode estar
+relacionado ao aumento do número de variáveis e restrições na formulação, que depende 
+da quantidade de nós na árvore, a qual cresce exponencialmente com $d$.
+
+Além disso, outro fato interessante foi que, para \emph{monk3} e \emph{monk1}, o tempo de execução
+diminui da profundidade $d=3$ para $d=5$. Similarmente, para \emph{house-votes-84}, o tempo
+diminui de $d=4$ para $d=5$. Uma possível explicação para este comportamento
+é que, ao aumentar a profundidade, apesar do modelo crescer, a árvore pode se ajustar melhor aos dados,
+facilitando o processo de poda no \emph{branch-and-bound}.
+
+A quantidade de dados das instâncias também impactou o desempenho do modelo. Por exemplo, \emph{soybean-small}, com $47$ linhas,
+foi resolvida rapidamente para todas as profundidades testadas.
+Já \emph{kr-vs-kp}, com $3196$ linhas, não foi resolvida no tempo limite para nenhuma profundidade.
+
+Como próximos passos, a aluna pretende continuar os experimentos e implementar as outras formulações propostas
+por Aghaei et al. \cite{Aghaei24}, além de explorar possíveis melhorias no modelo atual. No artigo, os autores
+apresentam os resultados experimentais somente das formulações mais gerais baseadas em árvores desbalanceadas 
+e as que utilizam \emph{Decomposição de Benders}. Futuramente, pretendemos comparar de forma mais detalhada
+os desempenhos das diferentes formulações.
 
 \section{Conclusão}
 
-[a escrever]
-
-Durante o Estudo Dirigido, diversos aspectos colaboraram para o amadurecimento profissional e acadêmico da aluna. 
+Durante o Estudo Dirigido, aspectos como uma base em PLI, disciplinas e reuniões
+em grupo colaboraram para o amadurecimento profissional e acadêmico da aluna. 
 Entre eles, é importante mencionar a construção de uma base de conhecimentos em Programação Linear Inteira.
 Através tanto do estudo individual, como das reuniões do grupo de pesquisa semanais, a estudante consolidou 
-o entendimento de técnicas de PLI e como elas são aplicadas no contexto de otimização.
+o entendimento de técnicas de PLI e como elas são aplicadas no contexto de otimização. 
 
-Além disso, a leitura de artigos sobre árvores de decisão ótimas colaborou para a compreensão do contexto de uso dessa técnica de categorização...
+Materiais disponibilizados de disciplinas como Fundamentos Matemáticos da Computação (MC358),
+Projeto e Análise de Algoritmos I (MC458) e II (MC558), e Combinatória Poliédrica facilitaram o entendimento acerca dos conceitos estudados e abordados, por exemplo, nos livros de Chvátal \cite{Chvatal1983}, Wolsey \cite{Wolsey2021} 
+e Uchoa et al. \cite{Uchoa2024}.
 
-- Matérias do curso que eu usei:
+Além disso, a leitura de artigos sobre árvores de decisão ótimas colaborou para a compreensão sobre o uso dessa técnica de categorização
+e das formulações possíveis para o problema. Entre estas, a proposta por Aghaei et al. \cite{Aghaei24}, baseada em
+fluxo e o trabalho de Verwer e Zhang \cite{Verwer2019}, o qual utiliza apenas variáveis binárias, proporcionaram à aluna um maior entendimento 
+sobre as diferentes abordagens para o problema, bem como suas vantagens e pontos de atenção.
 
-* MC358, MC458, MC558
-* Combinatória Poliédrica
+Por fim, na etapa de experimentação, a aluna reforçou os aprendizados adquiridos durante o Estudo Dirigido, 
+se familiarizando com o uso do \emph{solver} Gurobi \cite{Gurobi} e com as boas práticas em um experimento científico.
 
+\section*{Assinatura da Aluna}
 
 \begingroup
 \onehalfspacing
